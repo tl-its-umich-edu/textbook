@@ -1,0 +1,14 @@
+<h4>Books I am offering: {{books.length}}</h4>
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="book in books">
+        <span class="badge">${{book.price}}</span>
+        <h4>{{book.title}}</h4>
+        <p>{{book.author}}</p>
+        <p>
+            {{book.note}}
+        </p>
+        <p><a href="">Revise</a> | <span ng-show=" {{book.expired}} "> Expired - <a href="">Renew?</a> | </span>  <a href="">Remove</a></p>
+        
+    </li>
+</ul>
+

@@ -1,0 +1,36 @@
+{
+    "books": [
+        {
+            "title": "Monkeyluv : and other essays on our lives as animals",
+            "author": "Robert M. Sapolsky. 1st Scribner trade pbk. ed.. Scribner, 2006. Book. 9780743260169",
+            "note": "Some mud on cover",
+            "price": 23,
+            "id": 1,
+            "expired":true
+        },
+        {
+            "title": "Your inner fish : a journey into the 3.5-billion-year history of the human body",
+            "author": "Neil Shubin. 1st Vintage Books ed.. Vintage Books, 2009. Digital Paperback. 9780307277459",
+            "note": "Pristine",
+            "price": 2,
+            "id": 2,
+            "expired":false
+        },
+        {
+            "title": "Arcadia",
+            "author": "Tom Stoppard. Pbk. reissue ed.. Faber and Faber, 1993. Paperback. 9780571169344",
+            "note": "Fascinating. Could not put it down fast enough",
+            "price": 4,
+            "id": 3,
+            "expired":false
+        },
+        {
+            "title": "The Norton field guide to writing",
+            "author": "Richard Bullock, Wright State University. Third Edition.. 2013. Paperback. 9780393919561",
+            "note": "This book fills a much needed gap",
+            "price": 23,
+            "id": 5,
+            "expired":false
+        }
+    ]
+}

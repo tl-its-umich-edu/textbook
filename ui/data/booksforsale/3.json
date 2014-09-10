@@ -1,0 +1,28 @@
+{
+    "offers": [
+        {
+            "title": "Arcadia",
+            "author": "Tom Stoppard. Pbk. reissue ed.. Faber and Faber, 1993. Paperback. 9780571169344 ",
+            "owner": "Gonzalo Silverio",
+            "email": "gsilver@umich.edu",
+            "price": 3,
+            "note": "Exacrable condition, burn marks"
+        },
+        {
+            "title": "Arcadia",
+            "author": "Tom Stoppard. Pbk. reissue ed.. Faber and Faber, 1993. Paperback. 9780571169344 ",
+            "owner": "David Haines",
+            "email": "dlhaines@umich.edu",
+            "price": 12,
+            "note": "So so condition"
+        },
+        {
+            "title": "Arcadia",
+            "author": "Tom Stoppard. Pbk. reissue ed.. Faber and Faber, 1993. Paperback. 9780571169344 ",
+            "owner": "Zhen Qian",
+            "email": "zqian@umich.edu",
+            "price": 2,
+            "note": "Has seen a lot of action! Cheap."
+        }
+    ]
+}

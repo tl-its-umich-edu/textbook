@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="textApp" lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="lib/bootstrap-3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="lib/bootstrap-3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/custom_style.css">
+        <title>Courses and Textbooks</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/"><h1>Courses and Textbooks</h1></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#/ubook">uBook</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Terms <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="">Fall 2014</a>
+                                </li>
+                                <li>
+                                    <a href="">Winter 2014</a>
+                                </li>
+                                <li>
+                                    <a href="">Fall 2013</a>
+                                </li>
+                                <li>
+                                    <a href="">Winter 2013 link</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <div class="container-fluid contentWrapper">
+            <div class="row row-eq-heigh" id="content">
+                <div id="list" class="itemPanel view-animate-container">
+                    <div ng-view class="view-animate">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="spinner" style="display:none">
+        </div>
+        <script src="lib/jquery/jquery-1.11.1.min.js">
+        </script>
+        <script src="lib/bootstrap/bootstrap-3.2.0/js/bootstrap.min.js">
+        </script>
+        <script src="lib/moment/moment.min.js">
+        </script>
+        <script src="js/utils.js">
+        </script>
+        <script src="lib/angular/angular.min.js">
+        </script>
+        <script src="lib/angular/angular.route.min.js">
+        </script>
+        <script src="lib/angular/angular-animate.min.js">
+        </script>
+        <script src="js/controllers.js">
+        </script>
+        <script src="js/filters.js">
+        </script>
+    </body>
+</html>
