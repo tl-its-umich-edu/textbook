@@ -1,0 +1,67 @@
+<ul class="course-list2">
+    <li ng-repeat="course in courses" class="courseItem" style="border-bottom:0">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="fake">
+                <div>
+                    <h2><a href="#/" class="courseLink">{{course.title}}</a>
+                        <small class ="hidden-xs instructorName">
+                            {{course.instructor}} (<a href="" class="mailTolink">{{course.instructor_email}}</a>)
+                        </small>
+                    </h2>
+                </div>
+            </li>
+            <li>
+                <a ng-click="showBooks = ! showBooks" ng-show="course.books" class="booksControl" href="" role="tab" data-toggle="tab">Books</a>
+                <a ng-hide="course.books" class="pseudolink">Books</a>
+            </li>
+            <li>
+                <a ng-click="showInfo = ! showInfo" ng-show="course.description" class="infoControl" href="" role="tab" data-toggle="tab">Info</a>
+                <a ng-hide="course.description" class="pseudolink">Info</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="pane booksPane tab-pane" ng-class="{ 'hidden': ! showBooks }">
+                <p class="visible-xs instructorInfo">
+                    Instructor: {{course.instructor}} (<a href="" class="mailTolink">{{course.instructor_email}}</a>)
+                </p>
+                <ul>
+                    <li ng-repeat="book in course.books" class="book">
+                        <h3>{{book.title}}</h3>
+                        <div class="metadata">
+                            <p>
+                                {{book.author}}
+                            </p>
+                            <p>
+                                <small class="status">
+                                    {{book.status}}
+                                </small>
+                                <small class="muted">
+                                    {{book.note}}
+                                </small>
+                            </p>
+                        </div>
+                        <div class="sellLinks">
+                            <a class="offerBook" href="">Sell your copy</a>
+                            <a class="seeOffers" ng-show="book.available" href="#/offers/{{book.id}}">
+                                Buy ({{book.available}} available)</span>
+                            </a>
+                        <a class="gotoVendor"  ng-hide="book.available" href="">Amazon</a>
+                        <a class="gotoVendor"  ng-hide="book.available" href="">Textbooks.com</a>
+                        </div>
+                    </li>
+                </ul>
+                <p>
+                    {{course.note}}
+                </p>
+            </div>
+            <div class="pane tab-pane infoPane"  ng-class="{ 'hidden': ! showInfo }">
+                <p class="visible-xs instructorInfo">
+                    Instructor: {{course.instructor}} (<a href="" class="mailTolink">{{course.instructor_email}}</a>)
+                </p>
+                <div class="courseDescription">
+                    {{course.description}}
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>

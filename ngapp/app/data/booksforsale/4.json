@@ -1,0 +1,28 @@
+{
+    "offers": [
+        {
+            "title": "The Norton field guide to writing",
+            "author": "Richard Bullock, Wright State University. Third Edition.. 2013. Paperback. 9780393919561 ",
+            "owner": "Gonzalo Silverio",
+            "email": "gsilver@umich.edu",
+            "price": 3,
+            "note": "Fantastic condition, waterlogged"
+        },
+        {
+            "title": "The Norton field guide to writing",
+            "author": "Richard Bullock, Wright State University. Third Edition.. 2013. Paperback. 9780393919561 ",
+            "owner": "David Haines",
+            "email": "dlhaines@umich.edu",
+            "price": 12,
+            "note": "So so condition"
+        },
+        {
+            "title": "The Norton field guide to writing",
+            "author": "Richard Bullock, Wright State University. Third Edition.. 2013. Paperback. 9780393919561 ",
+            "owner": "Zhen Qian",
+            "email": "zqian@umich.edu",
+            "price": 2,
+            "note": "Has seen a lot of action! Cheap."
+        }
+    ]
+}
