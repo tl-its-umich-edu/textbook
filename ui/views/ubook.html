@@ -1,13 +1,18 @@
-<h4>Books I am offering: {{books.length}}</h4>
+<h4>Books I am offering: {{books.length}}<div class="pull-right btn-group" style="margin-top:-10px"><a href="" class="btn btn-default">Buy</a><a href=""  class="btn btn-default">Sell</a></div></h4>
 <ul class="list-group">
-    <li class="list-group-item" ng-repeat="book in books">
-        <span class="badge">${{book.price}}</span>
-        <h4>{{book.title}}</h4>
-        <p>{{book.author}}</p>
-        <p>
+    <li class="list-group-item book" ng-repeat="book in books" id="book{{$index}}">
+        <span class="badge">$<span class="bookPrice">{{book.price}}</span></span> 
+        <h4 class="bookTitle">{{book.title}}</h4>
+        <p class="author visible-xs">
+            {{book.author | words:5}}
+        </p>
+        <p class="author visible-md visible-sm visible-lg">
+            {{book.author}}
+        </p>
+        <p class="bookNote">
             {{book.note}}
         </p>
-        <p><a href="">Revise</a> | <span ng-show=" {{book.expired}} "> Expired - <a href="">Renew?</a> | </span>  <a href="">Remove</a></p>
+        <p><a href="" data-toggle="modal" data-target="#sellModal">Revise</a> | <span ng-show=" {{book.expired}} "> Expired - <a href="">Renew?</a> | </span>  <a href="">Remove</a></p>
         
     </li>
 </ul>

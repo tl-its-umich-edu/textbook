@@ -8,9 +8,12 @@
         "instructor_email": "dlhaines@umich.edu",
         "description": "Waaaa. Wwwwwaaaa!",
         "note": "This term we will be using a new textbook. As this is the first edition, used copies are not available unfortunately. We will be using 1) a traditional text book called Introduction to Psychology by Deborah LIcht; 2) an electronic resource called LaunchPad; and 3) a brief supplementary book of short essays. All three are required for this class. The least expensive way to buy the is to purchase them as a 'bundle.' A bundle means the publisher has created a package of materials that are sold as a group for a lower price than they could be purchased separately. There are two bundle options for this class. One includes both a paper AND an electronic version of the textbook, plus the other two required resources. The other one includes only an electronic version of the textbook, plus the other two required resources. You can choose purely on price or you can choose based on your preference for reading the printed word versus only on a computer screen. It's entirely up to you. The best place to buy this bundle is through the Barnes and Noble at the Union, not online.",
+        "coursepack_required":true,
+        "coursepack_location":"Kinkos",
         "books": [
             {
                 "title": "Monkeyluv : and other essays on our lives as animals",
+                "isbn":"0743260163",
                 "author": "Robert M. Sapolsky. 1st Scribner trade pbk. ed.. Scribner, 2006. Book. 9780743260169",
                 "status": "Required",
                 "note": "Check library for reserve copy of this item.",
@@ -19,6 +22,7 @@
             },
             {
                 "title": "Your inner fish : a journey into the 3.5-billion-year history of the human body",
+                "isbn": "0375424474",
                 "author": "Neil Shubin. 1st Vintage Books ed.. Vintage Books, 2009. Digital Paperback. 9780307277459",
                 "status": "Optional",
                 "note": "Something",
@@ -28,6 +32,7 @@
             {
                 "title": "Arcadia",
                 "author": "Tom Stoppard. Pbk. reissue ed.. Faber and Faber, 1993. Paperback. 9780571169344",
+                "isbn":"0571169341",
                 "status": "Optional",
                 "note": "Something",
                 "available": 4,
@@ -35,6 +40,7 @@
             },
             {
                 "title": "The Norton field guide to writing",
+                "isbn":"0393919595",
                 "author": "Richard Bullock, Wright State University. Third Edition.. 2013. Paperback. 9780393919561",
                 "status": "Required",
                 "note": "Something",
@@ -50,9 +56,12 @@
         "instructor": "Zhen Qian",
         "instructor_email": "zqian@umich.edu",
         "description": "Waaaa. Wwwwwaaaa!",
+        "coursepack_required":false,
+        "coursepack_location":"",
         "books": [
             {
                 "title": "Book title 1",
+                "isbn":"0393919595",
                 "author": "Book author 1",
                 "status": "Required",
                 "note": "Something",
@@ -61,6 +70,7 @@
             },
             {
                 "title": "Book title 2",
+                "isbn":"0393919595",
                 "author": "Book author 2",
                 "status": "Optional",
                 "note": "Something",
@@ -69,6 +79,7 @@
             },
             {
                 "title": "Book title 3",
+                "isbn":"0393919595",
                 "author": "Book author 3",
                 "status": "Optional",
                 "note": "Something",
@@ -77,6 +88,7 @@
             },
             {
                 "title": "Book title 4",
+                "isbn":"0393919595",
                 "author": "Book author 4",
                 "status": "Required",
                 "note": "Something",
@@ -91,7 +103,9 @@
         "link": "https://some.ctools.url",
         "instructor": "Pushyami Gundala",
         "instructor_email": "pushyami@umich.edu",
-        "description": "Waaaa. Wwwwwaaaa!"
+        "description": "Waaaa. Wwwwwaaaa!",
+        "coursepack_required":false,
+        "coursepack_location":"Kinkos"
     },
     {
         "title": "Span 212",
@@ -100,10 +114,13 @@
         "link": "https://some.ctools.url",
         "instructor": "Gonzalo Silverio",
         "instructor_email": "gsilver@umich.edu",
+        "coursepack_required":false,
+        "coursepack_location":"Kinkos",
         "books": [
             {
                 "title": "Book title 1",
                 "author": "Book author 1",
+                "isbn":"0393919595",
                 "status": "Required",
                 "note": "Something",
                 "id":1
@@ -111,6 +128,7 @@
             {
                 "title": "Book title 2",
                 "author": "Book author 2",
+                "isbn":"0393919595",
                 "status": "Optional",
                 "note": "Something",
                 "id":2
@@ -118,12 +136,14 @@
             {
                 "title": "Book title 3",
                 "author": "Book author 3",
+                "isbn":"0393919595",
                 "status": "Optional",
                 "note": "Something"
             },
             {
                 "title": "Book title 4",
                 "author": "Book author 4",
+                "isbn":"0393919595",
                 "status": "Required",
                 "note": "Something",
                 "id":3
@@ -136,6 +156,7 @@
         "site": false,
         "link": false,
         "instructor": "Reginaldo Rodrigues",
-        "instructor_email": "reggiejr@umich.edu"
+        "instructor_email": "reggiejr@umich.edu",
+        "description": "We don't need textbooks, as we will write our own collaboratively."
     }
 ]
