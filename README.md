@@ -40,7 +40,7 @@ yo angular notes
 
 ```
 nvm use 0.10.13
-cd simple-angular-rails-app/ngapp
+cd textbooks/ngapp
 npm install -g grunt-cli
 npm install
 bower install
