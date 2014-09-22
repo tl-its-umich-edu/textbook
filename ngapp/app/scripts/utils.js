@@ -84,7 +84,7 @@ $(document).on('click', 'a.infoControl', function(e){
 $('#sellModal').on('show.bs.modal', function (e) {
   var $book = $(e.relatedTarget).closest('.book');
   $("#modalBookTitle").text($book.find('.bookTitle').text());
-  $("#modalBookAuthor").text($book.find('.author').text());
+  $("#modalBookAuthor").text($book.find('.authorCopy').text());
   $("#modalPrice").val('0');
   var bookNote = $.trim($book.find('.bookNote').text());
   var bookPrice = $.trim($book.find('.bookPrice').text());
