@@ -29,7 +29,7 @@
                         <h3 class="bookTitle">{{book.title}}</h3>
                         <div class="metadata">
                             <p class="author visible-xs">
-                                {{book.author}}
+                                {{book.author | words:5}}
                             </p>
                             <p class="author visible-md visible-sm visible-lg">
                                 {{book.author}}

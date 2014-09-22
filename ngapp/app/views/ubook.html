@@ -4,7 +4,7 @@
         <span class="badge">$<span class="bookPrice">{{book.price}}</span></span> 
         <h4 class="bookTitle">{{book.title}}</h4>
         <p class="author visible-xs">
-            {{book.author}}
+            {{book.author | words:5}}
         </p>
         <p class="author visible-md visible-sm visible-lg">
             {{book.author}}

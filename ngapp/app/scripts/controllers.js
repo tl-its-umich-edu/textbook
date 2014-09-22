@@ -1,4 +1,4 @@
-var textApp = angular.module('textApp', ['dashFilters', 'ngRoute', 'ngAnimate']);
+var textApp = angular.module('textApp', ['dashFilters', 'ngRoute', 'ngAnimate','truncate']);
 
 var proxy = '';
 
