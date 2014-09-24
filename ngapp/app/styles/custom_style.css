@@ -62,7 +62,7 @@ ul li:last-child {
 }
 
 .course-list > li {
-  padding: 5px;
+  padding: 5px 0;
 }
 
 li.active a {
@@ -163,7 +163,7 @@ non-boostrap styles
 
 .courseItem h2 {
   font-size: 16px;
-  line-height: 30px;
+  line-height: 40px;
   margin: 0;
   padding: 0;
   border-bottom: 0;
@@ -204,9 +204,6 @@ mobile
   .mainView > ul,.itemPanel > ul > li {
     padding:0;
   }
-  .courseItem h2 {
-    line-height: 40px;
-  }
   /*
    angular animations for mobile
    */
@@ -216,9 +213,12 @@ mobile
   .view {
       width: 100%;
       position:absolute;
-      padding:5px;
+      padding:0;
       top: 0;
       left: 0;
+  }
+  .viewInner {
+    padding:5px;
   }
   .slideLeft.ng-enter, .slideLeft.ng-leave, .slideRight.ng-enter, .slideRight.ng-leave  {
       -webkit-transition:all .5s;

@@ -6,18 +6,23 @@ textApp.config(function($routeProvider){
     //routes
     $routeProvider.when('/', {
         controller: 'coursesController',
-        templateUrl: 'views/courses.html'
+        templateUrl: 'views/courses.html',
+        animate: 'slideRight'
     }).when('/mysales', {
         controller: 'mySalesController',
-        templateUrl: 'views/mysales.html'
+        templateUrl: 'views/mysales.html',
+        animate: 'slideLeft'
     }).when('/offers/:bookId', {
         controller: 'offersController',
-        templateUrl: 'views/offers.html'
+        templateUrl: 'views/offers.html',
+        animate: 'slideLeft'
     }).when('/ubook', {
         controller: 'uBookController',
-        templateUrl: 'views/ubook.html'
+        templateUrl: 'views/ubook.html',
+        animate: 'slideLeft'        
     }).otherwise({
-        redirectTo: '/'
+        redirectTo: '/',
+        animate: 'slideRight'
     }); 
 });
 
@@ -26,8 +31,6 @@ textApp.controller('coursesController', ['$scope', '$http', function($scope, $ht
     $http.get(url, { cache: 'true'}).success(function(data){
         $scope.courses = data;
     });
-
-
 }
 ]);
 
@@ -46,3 +49,17 @@ textApp.controller('uBookController', ['$scope', '$http',  function($scope, $htt
     });
 }
 ]);
+
+
+textApp.directive('animClass',function($route){
+  return {
+    link: function(scope, elm){
+      var enterClass = $route.current.animate;
+      elm.addClass(enterClass);
+      scope.$on('$destroy',function(){
+        elm.removeClass(enterClass);
+        elm.addClass($route.current.animate);
+      });
+    }
+  };
+});
