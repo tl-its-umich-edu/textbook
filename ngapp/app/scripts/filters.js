@@ -1,4 +1,7 @@
-angular.module('dashFilters', []).filter('dateAgo', function(){
+/*global moment:false */
+/*jshint strict:false */
+
+angular.module('textBookFilters', []).filter('dateAgo', function(){
     return function(input){
         var when = moment.unix(input);
         var now = moment();
@@ -9,7 +12,7 @@ angular.module('dashFilters', []).filter('dateAgo', function(){
     	else {
     		return moment(when).format('MM/D');
     	}
-    }
+    };
 }).filter('dateUntil', function(){
     return function(input){
         if (input ===''){
@@ -23,5 +26,5 @@ angular.module('dashFilters', []).filter('dateAgo', function(){
         else {
             return when.from(now);
         }
-    }
-})
+    };
+});

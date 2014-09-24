@@ -1,6 +1,6 @@
-var textApp = angular.module('textApp', ['dashFilters', 'ngRoute', 'ngAnimate','truncate']);
+/*jshint strict:false */
 
-var proxy = '';
+var textApp = angular.module('textApp', ['textBookFilters', 'ngRoute', 'ngAnimate','truncate']);
 
 textApp.config(function($routeProvider){
     //routes
@@ -18,15 +18,16 @@ textApp.config(function($routeProvider){
         templateUrl: 'views/ubook.html'
     }).otherwise({
         redirectTo: '/'
-    })
-    
-})
+    }); 
+});
 
-textApp.controller('coursesController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
+textApp.controller('coursesController', ['$scope', '$http', function($scope, $http){
     var url = 'data/classes.json';
-    $http.get(url).success(function(data){
+    $http.get(url, { cache: 'true'}).success(function(data){
         $scope.courses = data;
     });
+
+
 }
 ]);
 
@@ -38,7 +39,7 @@ textApp.controller('offersController', ['$scope', '$http', '$routeParams', funct
 }
 ]);
 
-textApp.controller('uBookController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
+textApp.controller('uBookController', ['$scope', '$http',  function($scope, $http){
     var url = 'data/myoffers.json';
     $http.get(url).success(function(data){
         $scope.books = data.books;

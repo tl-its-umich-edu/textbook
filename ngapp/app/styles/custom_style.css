@@ -17,20 +17,11 @@
   background: #fff;
 }
 
-.navbar-brand h1 {
+h1 {
   font-size: 20px;
   padding: 0;
   line-height: 20px;
   margin: 0;
-}
-
-#spinner {
-  background: transparent url(../images/ajax_loader_blue_256.gif) 0 0 no-repeat;
-  height: 256px;
-  width: 256px;
-  position: absolute;
-  top: 10%;
-  left: 40%
 }
 
 /*
@@ -89,13 +80,16 @@ li.active a {
 a.pseudolink {
   color: #aaa;
   cursor: text;
-  outline: none;
   background: none
 }
 
 a.pseudolink:hover {
   background: #fff !important;
   border-color: #fff #fff #ddd #fff !important;
+}
+
+.bookTitle {
+  font-size: 16px;
 }
 
 /*
@@ -129,7 +123,7 @@ non-boostrap styles
 }
 
 .book h3 {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   margin:10px 0;
   padding:0;
@@ -211,7 +205,7 @@ mobile
     padding:0;
   }
   .courseItem h2 {
-  line-height: 40px;
+    line-height: 40px;
   }
   /*
    angular animations for mobile
@@ -219,7 +213,6 @@ mobile
   .view-animate-container {
     position: relative;
   }
-  
   .view {
       width: 100%;
       position:absolute;
@@ -227,34 +220,26 @@ mobile
       top: 0;
       left: 0;
   }
-  
   .slideLeft.ng-enter, .slideLeft.ng-leave, .slideRight.ng-enter, .slideRight.ng-leave  {
       -webkit-transition:all .5s;
       transition:all .5s;
   }
-  
   .slideLeft.ng-enter {
       left:100%;
   }
-  
   .slideLeft.ng-enter.ng-enter-active {
       left:0;
   }
-  
   .slideLeft.ng-leave.ng-leave-active {
       left:-100%;
   }
-  
   .slideRight.ng-enter {
       left:-100%;
   }
-  
   .slideRight.ng-enter.ng-enter-active {
       left:0;
   }
-  
   .slideRight.ng-leave.ng-leave-active {
       left:100%;
   }
-
 }
