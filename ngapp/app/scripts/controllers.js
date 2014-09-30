@@ -27,7 +27,7 @@ textApp.config(function($routeProvider){
 });
 
 textApp.controller('coursesController', ['$scope', '$http', function($scope, $http){
-    var url = 'data/classes.json';
+    var url = 'http://localhost:3000/api/v1/classes.json';
     $http.get(url, { cache: 'true'}).success(function(data){
         $scope.courses = data;
     });
@@ -35,7 +35,7 @@ textApp.controller('coursesController', ['$scope', '$http', function($scope, $ht
 ]);
 
 textApp.controller('offersController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
-    var url = 'data/booksforsale/' + $routeParams.bookId + '.json';
+    var url = 'http://localhost:3000/api/v1/booksforsale/' + $routeParams.bookId + '.json';
     $http.get(url).success(function(data){
         $scope.offers = data.offers;
     });
@@ -43,7 +43,7 @@ textApp.controller('offersController', ['$scope', '$http', '$routeParams', funct
 ]);
 
 textApp.controller('uBookController', ['$scope', '$http',  function($scope, $http){
-    var url = 'data/myoffers.json';
+    var url = 'http://localhost:3000/api/v1/myoffers.json';
     $http.get(url).success(function(data){
         $scope.books = data.books;
     });
