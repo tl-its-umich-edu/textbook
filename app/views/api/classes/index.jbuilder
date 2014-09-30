@@ -1,1 +1,1 @@
-json.array! @things
+json.array! @classes

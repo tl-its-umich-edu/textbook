@@ -16,4 +16,4 @@
 # Using secret_token for rails3 compatibility. Change to secret_key_base
 # to avoid deprecation warning.
 # Can be safely removed in a rails3 api-only application.
-TextbookApi2::Application.config.secret_token = '1f0e262a51b2bb8624b1956307bb96df802e7ad06f77a06c9a8f68f5bec49e5015e5d4b1c2beafec45b6f363717ba99003ae098f832c099416c9f46b606679a0'
+TextbookApi::Application.config.secret_token = '1f0e262a51b2bb8624b1956307bb96df802e7ad06f77a06c9a8f68f5bec49e5015e5d4b1c2beafec45b6f363717ba99003ae098f832c099416c9f46b606679a0'
