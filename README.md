@@ -32,6 +32,8 @@ bundle exec rails s -p 3000
 **NOTE**:  the angular application was generated using these commands.
 
 ```
+npm install yoman
+npm install lodash
 npm install -g yo generator-angular
 mkdir ngapp; cd ngapp
 yo angular notes

@@ -45,3 +45,5 @@ end
 gem 'rack-cors'
 
 gem 'json'
+
+gem 'rest-client'
