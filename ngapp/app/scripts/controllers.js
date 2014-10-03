@@ -19,11 +19,11 @@ textApp.config(function($routeProvider){
     }).when('/ubook', {
         controller: 'uBookController',
         templateUrl: 'views/ubook.html',
-        animate: 'slideLeft'        
+        animate: 'slideLeft'
     }).otherwise({
         redirectTo: '/',
         animate: 'slideRight'
-    }); 
+    });
 });
 
 textApp.controller('coursesController', ['$scope', '$http', function($scope, $http){
