@@ -96,6 +96,9 @@ a.pseudolink:hover {
 non-boostrap styles
 */
 
+.noPhase1 {
+	display:none !important
+}
 .pane {
   -webkit-border-bottom-right-radius: 5px;
   -webkit-border-bottom-left-radius: 5px;

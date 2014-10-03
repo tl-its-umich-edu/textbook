@@ -14,7 +14,7 @@
                 <a ng-show="course.books || course.note || course.coursepack_location" class="booksControl" href="" role="tab">Books</a>
                 <a ng-hide="course.books || course.note || course.coursepack_location" class="pseudolink">Books</a>
             </li>
-            <li>
+            <li class="noPhase1">
                 <a ng-show="course.description" class="infoControl" href="" role="tab">Info</a>
                 <a ng-hide="course.description" class="pseudolink">Info</a>
             </li>
@@ -45,12 +45,12 @@
                             </p>
                         </div>
                         <div class="sellLinks">
-                            <a class="offerBook" href="" data-toggle="modal" data-target="#sellModal">Sell your copy</a>
-                            <a class="seeOffers" ng-show="book.available" href="#/offers/{{book.id}}">
+                            <a class="offerBook noPhase1" href="" data-toggle="modal" data-target="#sellModal">Sell your copy</a>
+                            <a class="seeOffers noPhase1" ng-show="book.available" href="#/offers/{{book.id}}">
                                 Buy ({{book.available}} available)</span>
                             </a>
-                        <a class="gotoVendor"  ng-hide="book.available" target="_blank" href=" http://www.amazon.com/dp/{{book.isbn}}">Amazon</a>
-                        <a class="gotoVendor"  ng-hide="book.available" target="_blank" href="http://www.gettextbooks.com/isbn/{{book.isbn}}">Textbooks.com</a>
+                        <a class="gotoVendor" target="_blank" href=" http://www.amazon.com/dp/{{book.isbn}}">Amazon</a>
+                        <a class="gotoVendor" target="_blank" href="http://www.gettextbooks.com/isbn/{{book.isbn}}">Textbooks.com</a>
                         </div>
                     </li>
                 </ul>
