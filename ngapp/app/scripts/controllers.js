@@ -28,8 +28,18 @@ textApp.config(function($routeProvider){
 
 textApp.controller('coursesController', ['$scope', '$http', function($scope, $http){
     var url = 'http://localhost:3000/api/v1/classes.json';
-    $http.get(url, { cache: 'true'}).success(function(data){
-        $scope.courses = data;
+
+    $http.get(url, {
+            params: {
+                term: "2010",
+                school:"LSA",
+                subject: "STATS",
+                catalogNbr: "250",
+                section: "001"
+            }
+        }
+    ).success(function(data){
+        $scope.offers = data.offers;
     });
 }
 ]);

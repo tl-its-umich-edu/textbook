@@ -24,7 +24,7 @@ You'll need:
 ```
 rvm use 1.9.3
 git clone https://github.com/tl-its-umich-edu/textbook
-cd simple-angular-rails-app
+cd textbook
 bundle install
 bundle exec rails s -p 3000
 ```
@@ -32,7 +32,7 @@ bundle exec rails s -p 3000
 **NOTE**:  the angular application was generated using these commands.
 
 ```
-npm install yoman
+npm install yeoman
 npm install lodash
 npm install -g yo generator-angular
 mkdir ngapp; cd ngapp

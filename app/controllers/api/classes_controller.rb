@@ -8,11 +8,16 @@ require "rest-client"
 class Api::ClassesController < ApplicationController
 
 	def index
+		term=params[:term]
+		school=params[:school]
+		subject=params[:subject]
+		catalogNbr=params[:catalogNbr]
+		section=params[:section]
 		#get the current token
 		access_token = refresh_token()
 
 		#get textbook information
-		render :json => api_call("https://api-gw.it.umich.edu/Curriculum/SOC/v1/Terms/2010/Schools/LSA/Subjects/STATS/CatalogNbrs/250/Sections/001/Textbooks", "Bearer " + access_token, "application/json", "GET", nil)
+		render :json => api_call("https://api-gw.it.umich.edu/Curriculum/SOC/v1/Terms/" + term + "/Schools/" + school + "/Subjects/" + subject + "/CatalogNbrs/" + catalogNbr + "/Sections/" + section + "/Textbooks", "Bearer " + access_token, "application/json", "GET", nil)
 
 	end
 
