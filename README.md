@@ -29,23 +29,24 @@ bundle install
 bundle exec rails s -p 3000
 ```
 
-**NOTE**:  the angular application was generated using these commands.
+**NOTE**:  the angular application was generated using these commands. You may need to sudo for the node package manager things.
 
 ```
-npm install yeoman
+npm install yo
 npm install lodash
 npm install -g yo generator-angular
 mkdir ngapp; cd ngapp
 yo angular notes
+- select all options except for Bootstrap SASS
 ```
 
 ### Session two: a grunt server
 
 ```
-nvm use 0.10.13
+nvm use 0.10.13 (optional)
 cd textbooks/ngapp
 npm install -g grunt-cli
 npm install
 bower install
-grunt server # opens a browser window... you are done!
+grunt serve # opens a browser window... you are done!
 ```
