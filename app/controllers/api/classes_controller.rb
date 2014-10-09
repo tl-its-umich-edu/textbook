@@ -8,33 +8,61 @@ require "rest-client"
 class Api::ClassesController < ApplicationController
 
 	def index
+
+		#the return json object
+		rv_json = ""
+
 		term=params[:term]
-		school=params[:school]
-		subject=params[:subject]
-		catalogNbr=params[:catalogNbr]
-		section=params[:section]
+		uid=params[:uid]
+
+		# get the environment variables
+		# developement, test, production?
+		rails_env = ENV["RAILS_ENV"]
+		# format: key=KEY,secret=secret
+		env_array = ENV[rails_env + "_api_key_secret"].split(',')
+		key_array=env_array[0].split('=')
+		key=key_array[1]
+		secret_array=env_array[1].split('=')
+		secret=secret_array[1]
+		url_array=env_array[2].split('=')
+		url=url_array[1]
+		token_url_array=env_array[3].split('=')
+		token_url=token_url_array[1]
+
 		#get the current token
-		access_token = refresh_token()
+		access_token = refresh_token(key, secret, token_url)
+
+		#get course information
+		call_url = url + "/StudentDashboard/v1/Students/" + uid + "/Terms/" + term + "/Schedule";
+
+		json_courses = api_call(call_url, "Bearer " + access_token, "application/json", "GET", nil)
+
+		# get the course information
+		rv_json = ["RegisteredClasses"]
+
+		response_data = json_courses["getMyRegClassesResponse"]
+		classes_array = response_data["RegisteredClasses"]
+
+		classes_array.each  do |c|
+				subject_catalog_array = c["Title"].split(' ')
+				textbooks_response = api_call(url + "/Curriculum/SOC/v1/Terms/" + term + "/Schools/" + "" + "/Subjects/" + subject_catalog_array[0] + "/CatalogNbrs/" + subject_catalog_array[1] + "/Sections/" + "001" + "/Textbooks", "Bearer " + access_token, "application/json", "GET", nil)
+
+				# insert books into JSON
+				c["Textbook"] = textbooks_response["getSOCTextbooksResponse"]["Textbook"]
+		end
+		p classes_array
+		render :json => classes_array
 
 		#get textbook information
-		render :json => api_call("https://api-gw.it.umich.edu/Curriculum/SOC/v1/Terms/" + term + "/Schools/" + school + "/Subjects/" + subject + "/CatalogNbrs/" + catalogNbr + "/Sections/" + section + "/Textbooks", "Bearer " + access_token, "application/json", "GET", nil)
+		#render :json => api_call(url + "/Curriculum/SOC/v1/Terms/" + term + "/Schools/" + school + "/Subjects/" + subject + "/CatalogNbrs/" + catalogNbr + "/Sections/" + section + "/Textbooks", "Bearer " + access_token, "application/json", "GET", nil)
 
 	end
 
 	## get token
-	def refresh_token
-		# developement, test, production?
-		rails_env = ENV["RAILS_ENV"]
-		# format: key=KEY,secret=secret
-		key_secret_array = ENV[rails_env + "_api_key_secret"].split(',')
-		key_array=key_secret_array[0].split(':')
-		key=key_array[1]
-		secret_array=key_secret_array[1].split(':')
-		secret=secret_array[1]
-
+	def refresh_token(key, secret, url)
 		encoded_string = Base64.strict_encode64 (key + ":" + secret)
 		param_hash={"grant_type"=>"client_credentials","scope"=> "PRODUCTION"}
-		json = api_call("https://api-km.it.umich.edu/token?grant_type=client_credentials&scope=PRODUCTION", "Basic " + encoded_string, "application/x-www-form-urlencoded", "POST", param_hash)
+		json = api_call(url + "/token?grant_type=client_credentials&scope=PRODUCTION", "Basic " + encoded_string, "application/x-www-form-urlencoded", "POST", param_hash)
 		return json["access_token"]
 	end
 
@@ -60,7 +88,7 @@ class Api::ClassesController < ApplicationController
 			request.set_form_data(param_hash)
 		end
 
-		sock = Net::HTTP.new(url.host, 443)
+		sock = Net::HTTP.new(url.host, url.port)
 		sock.use_ssl=true
 
 		store = OpenSSL::X509::Store.new
@@ -76,17 +104,5 @@ class Api::ClassesController < ApplicationController
 			response = http.request(request)
 			return JSON.parse(response.body)
 		end
-	end
-
-	def readFile(path)
-		data = ""
-		File.open(path, 'r') do |file|
-			while line = file.gets
-				# only read the first line, which is the token value
-				data=line.strip
-				break
-			end
-		end
-		return data
 	end
 end

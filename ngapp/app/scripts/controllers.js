@@ -32,10 +32,7 @@ textApp.controller('coursesController', ['$scope', '$http', function($scope, $ht
     $http.get(url, {
             params: {
                 term: "2010",
-                school:"LSA",
-                subject: "STATS",
-                catalogNbr: "250",
-                section: "001"
+                uid:"jorhill"
             }
         }
     ).success(function(data){
