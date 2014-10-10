@@ -3,16 +3,16 @@
         <ul class="nav nav-tabs" role="tablist">
             <li class="fake">
                 <div>
-                    <h2><a href="#/" class="courseLink">{{course.title}}</a>
+                    <h2><a href="{{course.Link}}" class="courseLink">{{course.Title}}</a>
                         <small class ="hidden-xs instructorName">
-                            {{course.instructor}} (<a href="" class="mailTolink">{{course.instructor_email}}</a>)
+                            {{course.Instructors.Name}} (<a href="mailto:{{course.Instructors.Email}}" class="mailTolink">{{course.Instructors.Email}}</a>)
                         </small>
-                    </h2> 
+                    </h2>
                 </div>
             </li>
             <li>
-                <a ng-show="course.books || course.note || course.coursepack_location" class="booksControl" href="" role="tab">Books</a>
-                <a ng-hide="course.books || course.note || course.coursepack_location" class="pseudolink">Books</a>
+                <a ng-show="course.Textbook.length || course.note || course.coursepack_location" class="booksControl" href="" role="tab">Books</a>
+                <a ng-hide="course.Textbook.length || course.note || course.coursepack_location" class="pseudolink">Books</a>
             </li>
             <li class="noPhase1">
                 <a ng-show="course.description" class="infoControl" href="" role="tab">Info</a>
@@ -22,49 +22,45 @@
         <div class="tab-content">
             <div class="pane booksPane tab-pane">
                 <p class="visible-xs instructorInfo">
-                    Instructor: {{course.instructor}} (<a href="" class="mailTolink">{{course.instructor_email}}</a>)
+                    Instructor: {{course.Instructors.Name}} (<a href="mailto:{{course.Instructors.Email}}" class="mailTolink">{{course.Instructors.Email}}</a>)
                 </p>
-                <ul ng-show="course.books">
-                    <li ng-repeat="book in course.books" class="book" id="book{{$index}}">
-                        <h3 class="bookTitle">{{book.title}}</h3>
+                <ul ng-show="course.Textbook">
+                    <li ng-repeat="book in course.Textbook" class="book" id="book{{$index}}">
+                        <h3 class="bookTitle">{{book.Title}}</h3>
                         <div class="metadata">
-                            <p class="author visible-xs">
-                                {{book.author | words:5}}
-                            </p>
-                            <p class="author authorCopy visible-md visible-sm visible-lg">
-                                {{book.author}}
-                            </p>
-
-                            <p>
-                                <small class="status">
-                                    {{book.status}}
-                                </small>
-                                <small class="muted">
-                                    {{book.note}}
-                                </small>
+                            <p class="author">
+                                <span ng-show="book.Author">{{book.Author}}</span>.
+                                <span ng-show="book.PubLocation" class="visible-lg-inline visible-md-inline">{{book.PubLocation}}:</span>
+                                <span ng-show="book.Publisher">{{book.Publisher}},</span>
+                                <span ng-show="book.PubYear">{{book.PubYear}}.</span>
+                                <span ng-show="book.RequirementStatus" class="status"> {{book.RequirementStatus}}</span>
                             </p>
                         </div>
                         <div class="sellLinks">
+                            <!--
                             <a class="offerBook noPhase1" href="" data-toggle="modal" data-target="#sellModal">Sell your copy</a>
                             <a class="seeOffers noPhase1" ng-show="book.available" href="#/offers/{{book.id}}">
                                 Buy ({{book.available}} available)</span>
                             </a>
-                        <a class="gotoVendor" target="_blank" href=" http://www.amazon.com/dp/{{book.isbn}}">Amazon</a>
-                        <a class="gotoVendor" target="_blank" href="http://www.gettextbooks.com/isbn/{{book.isbn}}">Textbooks.com</a>
+                            -->
+                            <a class="gotoVendor" target="_blank" href=" http://www.amazon.com/dp/{{book.ISBN}}">Amazon</a>
+                            <a class="gotoVendor" target="_blank" href="http://www.gettextbooks.com/isbn/{{book.ISBN}}">Textbooks.com</a>
                         </div>
                     </li>
                 </ul>
+                <!-- this info in this div not available in samples -->
                 <div ng-show="course.coursepack_location" class="coursePackInfo">
-                  <small class="status" ng-show="course.coursepack_required">Coursepack Required.</small>
-                  <small class="status" ng-hide="course.coursepack_required">Coursepack Not Required.</small>
-                  <small class="" ng-show="course.coursepack_location">Coursepack location: {{course.coursepack_location}}</small></div>
+
+                    <small class="status" ng-show="course.coursepack_required">Coursepack Required.</small>
+                    <small class="status" ng-hide="course.coursepack_required">Coursepack Not Required.</small>
+                    <small class="" ng-show="course.coursepack_location">Coursepack location: {{course.coursepack_location}}</small></div>
                 <p class="courseNote" ng-show="course.note">
                     {{course.note}}
                 </p>
             </div>
             <div class="pane tab-pane infoPane">
                 <p class="visible-xs instructorInfo">
-                    Instructor: {{course.instructor}} (<a href="" class="mailTolink">{{course.instructor_email}}</a>)
+                    Instructor: {{course.Instructors.Name}} (<a href="mailto:{{course.Instructors.Email}}" class="mailTolink">{{course.Instructors.Email}}</a>)
                 </p>
                 <div class="courseDescription">
                     {{course.description}}
