@@ -31,12 +31,12 @@ textApp.controller('coursesController', ['$scope', '$http', function($scope, $ht
 
     $http.get(url, {
             params: {
-                term: "2010",
-                uid:"jorhill"
+                term: '2010',
+                uid:'jorhill'
             }
         }
     ).success(function(data){
-        $scope.offers = data.offers;
+        $scope.courses= data.courses;
     });
 }
 ]);
