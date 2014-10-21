@@ -40,7 +40,7 @@ class Api::ClassesController < ApplicationController
 		# get the course information
 		rv_json = ["RegisteredClasses"]
 
-		response_data = json_courses["getMyRegClassesResponse"]
+		response_data = json_courses["getMyClsScheduleResponse"]
 		classes_array = response_data["RegisteredClasses"]
 
 		classes_array.each  do |c|
