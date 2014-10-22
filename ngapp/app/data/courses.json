@@ -1,0 +1,148 @@
+[
+    {
+        "Title": "AMCULT 217",
+        "Subtitle": "Intr Nat Amer Stds",
+        "SectionNumber": "001",
+        "Source": "",
+        "Link": "",
+        "Instructor": {
+            "Name": "Daubenmier,Judith Marie",
+            "Role": "Primary Instructor",
+            "Email": "JDAUBENM@umich.edu"
+        },
+        "Textbook": {
+            "ItemType": "",
+            "ISBN": "",
+            "Title": "",
+            "Author": "",
+            "Edition": "",
+            "Publisher": "",
+            "PubLocation": "",
+            "PubYear": "",
+            "RequirementStatus": ""
+        }
+    },
+    {
+        "Title": "AMCULT 217",
+        "Subtitle": "Intr Nat Amer Stds",
+        "SectionNumber": "002",
+        "Source": "",
+        "Link": "",
+        "Textbook": {
+            "ItemType": "",
+            "ISBN": "",
+            "Title": "",
+            "Author": "",
+            "Edition": "",
+            "Publisher": "",
+            "PubLocation": "",
+            "PubYear": "",
+            "RequirementStatus": ""
+        }
+    },
+    {
+        "Title": "MKT 408",
+        "Subtitle": "Pricing",
+        "SectionNumber": "001",
+        "Source": "",
+        "Link": "",
+        "Instructor": {
+            "Name": "Krishna,Aradhna J",
+            "Role": "Primary Instructor",
+            "Email": "ARADHNA@umich.edu"
+        },
+        "Textbook": {
+            "ItemType": "",
+            "ISBN": "",
+            "Title": "",
+            "Author": "",
+            "Edition": "",
+            "Publisher": "",
+            "PubLocation": "",
+            "PubYear": "",
+            "RequirementStatus": ""
+        }
+    },
+    {
+        "Title": "MKT 418",
+        "Subtitle": "Marketing Analytics",
+        "SectionNumber": "001",
+        "Source": "",
+        "Link": "",
+        "Instructor": {
+            "Name": "Aribarg,Anocha",
+            "Role": "Primary Instructor",
+            "Email": "ANOCHA@umich.edu"
+        },
+        "Textbook": {
+            "ItemType": "",
+            "ISBN": "",
+            "Title": "",
+            "Author": "",
+            "Edition": "",
+            "Publisher": "",
+            "PubLocation": "",
+            "PubYear": "",
+            "RequirementStatus": ""
+        }
+    },
+    {
+        "Title": "STRATEGY 390",
+        "Subtitle": "Corporate Strategy",
+        "SectionNumber": "004",
+        "Source": "",
+        "Link": "",
+        "Instructor": {
+            "Name": "Ostler,James Owen",
+            "Role": "Primary Instructor",
+            "Email": "JOSTLER@umich.edu"
+        },
+        "Textbook": {
+            "ItemType": "",
+            "ISBN": "",
+            "Title": "",
+            "Author": "",
+            "Edition": "",
+            "Publisher": "",
+            "PubLocation": "",
+            "PubYear": "",
+            "RequirementStatus": ""
+        }
+    },
+    {
+        "Title": "TO 411",
+        "Subtitle": "Support With Excel",
+        "SectionNumber": "001",
+        "Source": "",
+        "Link": "",
+        "Instructor": {
+            "Name": "Walls,Joseph G",
+            "Role": "Primary Instructor",
+            "Email": "JGWALLS@umich.edu"
+        },
+        "Textbook": [
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9781118490372",
+                "Title": "Excel VBA Programming for Dummies",
+                "Author": "John Walkenbach",
+                "Edition": "3RD",
+                "Publisher": "John Wiley & Sons",
+                "PubLocation": "Hoboken, NJ",
+                "PubYear": "2013",
+                "RequirementStatus": "Required"
+            },
+            {
+                "ItemType": "Textbook",
+                "ISBN": "1285169336",
+                "Title": "New perspectives on Microsoft Office Excel 2013.",
+                "Author": "Roy Ageloff, June Jamrich Parsons, Dan Oja, Patrick Carey.",
+                "Edition": "",
+                "Publisher": "",
+                "PubLocation": "",
+                "PubYear": "2013",
+                "RequirementStatus": "Required"
+            }
+        ]
+    }
+]
