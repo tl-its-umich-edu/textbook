@@ -28,6 +28,8 @@ textApp.config(function($routeProvider){
 
 textApp.controller('coursesController', ['$scope', '$http', function($scope, $http){
     var url = 'http://localhost:3000/api/v1/classes.json';
+    //below for testing    
+    //var url = 'data/courses.json';
 
     $http.get(url, {
             params: {
@@ -36,7 +38,7 @@ textApp.controller('coursesController', ['$scope', '$http', function($scope, $ht
             }
         }
     ).success(function(data){
-        $scope.courses= data.courses;
+        $scope.courses= data;
     });
 }
 ]);

@@ -27,4 +27,11 @@ angular.module('textBookFilters', []).filter('dateAgo', function(){
             return when.from(now);
         }
     };
+}).filter('fixInstructorName', function(){
+    return function(input){
+        if (input) {
+            return input.replace(',', ', ');
+        }
+        
+    };
 });

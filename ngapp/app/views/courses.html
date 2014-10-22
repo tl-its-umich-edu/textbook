@@ -4,8 +4,11 @@
             <li class="fake">
                 <div>
                     <h2><a href="{{course.Link}}" class="courseLink">{{course.Title}}</a>
-                        <small class ="hidden-xs instructorName">
-                            {{course.Instructors.Name}} (<a href="mailto:{{course.Instructors.Email}}" class="mailTolink">{{course.Instructors.Email}}</a>)
+                        <small class ="hidden-xs instructorName" ng-show="course.Instructor.Name">
+                            {{course.Instructor.Name | fixInstructorName }} (<a href="mailto:{{course.Instructor.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
+                        </small>
+                        <small class ="hidden-xs instructorName" ng-hide="course.Instructor.Name">
+                            Staff
                         </small>
                     </h2>
                 </div>
@@ -21,8 +24,8 @@
         </ul>
         <div class="tab-content">
             <div class="pane booksPane tab-pane">
-                <p class="visible-xs instructorInfo">
-                    Instructor: {{course.Instructors.Name}} (<a href="mailto:{{course.Instructors.Email}}" class="mailTolink">{{course.Instructors.Email}}</a>)
+                <p class="visible-xs instructorInfo"  ng-show="course.Instructor.Name">
+                    Instructor: {{course.Instructor.Name | fixInstructorName }} (<a href="mailto:{{course.Instructor.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
                 </p>
                 <ul ng-show="course.Textbook">
                     <li ng-repeat="book in course.Textbook" class="book" id="book{{$index}}">
@@ -43,7 +46,7 @@
                                 Buy ({{book.available}} available)</span>
                             </a>
                             -->
-                            <a class="gotoVendor" target="_blank" href=" http://www.amazon.com/dp/{{book.ISBN}}">Amazon</a>
+                            <a ng-hide="book.ISBN.length===13" class="gotoVendor" target="_blank" href=" http://www.amazon.com/dp/{{book.ISBN}}">Amazon</a>
                             <a class="gotoVendor" target="_blank" href="http://www.gettextbooks.com/isbn/{{book.ISBN}}">Textbooks.com</a>
                         </div>
                     </li>
@@ -59,8 +62,8 @@
                 </p>
             </div>
             <div class="pane tab-pane infoPane">
-                <p class="visible-xs instructorInfo">
-                    Instructor: {{course.Instructors.Name}} (<a href="mailto:{{course.Instructors.Email}}" class="mailTolink">{{course.Instructors.Email}}</a>)
+                <p class="visible-xs instructorInfo  ng-show="course.Instructor.Name"">
+                    Instructor: {{course.Instructor.Name}} (<a href="mailto:{{course.Instructors.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
                 </p>
                 <div class="courseDescription">
                     {{course.description}}
