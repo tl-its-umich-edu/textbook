@@ -45,7 +45,10 @@ ul li:last-child {
   width: 55%;
   padding-left: 15px;
 }
+.nav-tabs {
+  margin-bottom:0;
 
+}
 .nav-tabs > li.fake a:hover {
   background: #fff;
   border-width: 1px 0 1px;
@@ -86,6 +89,8 @@ a.pseudolink {
 a.pseudolink:hover {
   background: #fff !important;
   border-color: #fff #fff #ddd #fff !important;
+  border:transparent;
+  cursor: text;
 }
 
 .bookTitle {
