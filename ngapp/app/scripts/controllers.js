@@ -8,6 +8,10 @@ textApp.config(function($routeProvider){
         controller: 'coursesController',
         templateUrl: 'views/courses.html',
         animate: 'slideRight'
+    }).when('/print_courses', {
+        controller: 'coursesController',
+        templateUrl: 'views/print_courses.html',
+        animate: 'slideLeft'
     }).when('/mysales', {
         controller: 'mySalesController',
         templateUrl: 'views/mysales.html',
@@ -29,12 +33,12 @@ textApp.config(function($routeProvider){
 textApp.controller('coursesController', ['$scope', '$http', function($scope, $http){
     var url = 'http://localhost:3000/api/v1/classes.json';
     //below for testing    
-    //var url = 'data/courses.json';
+    //var url = 'data/courses2.json';
 
     $http.get(url, {
             params: {
                 term: '2010',
-                uid:'jorhill'
+                uid:'ststvii'
             }
         }
     ).success(function(data){

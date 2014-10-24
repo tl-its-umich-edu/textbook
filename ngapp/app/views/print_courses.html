@@ -1,7 +1,7 @@
 <ul class="course-list">
     <li ng-repeat="course in courses" class="courseItem">
-        <ul class="nav nav-tabs row navTabs" role="tablist">
-            <li class="fake col-lg-8 col-md-8 col-sm-8 col-xs-8">
+        <ul class="row" role="tablist">
+            <li class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                 <div>
                     <h2 class="row">
                         <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
@@ -23,16 +23,9 @@
                     </h2>
                 </div>
             </li>
-            <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:right">
-                <a ng-show="course.Textbook.length || course.note || course.coursepack_location" class="booksControl" href="" role="tab">Books</a>
-                <a ng-hide="course.Textbook.length || course.note || course.coursepack_location" class="pseudolink">Books</a>
-                <li class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="text-align:right">
-                <a ng-show="course.description" class="infoControl" href="" role="tab">Info</a>
-                <a ng-hide="course.description" class="pseudolink">Info</a>
-            </li>
         </ul>
-        <div class="tab-content">
-            <div class="pane booksPane tab-pane">
+        <div ng-show="course.Textbook.length || course.note || course.coursepack_location">
+            <div class="pane_print">
                 <div class="visible-xs visible-sm instructorInfo">
                     <div ng-show="course.Instructor.Name">
                         {{course.Instructor.Name | fixInstructorName }} (<a href="mailto:{{course.Instructor.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
@@ -47,7 +40,7 @@
                     </div>
                 </div>
                 <ul ng-show="course.Textbook">
-                    <li ng-repeat="book in course.Textbook" class="book" id="book{{$index}}">
+                    <li ng-repeat="book in course.Textbook" class="book_print" id="book{{$index}}">
                         <h3 class="bookTitle">{{book.Title}}</h3>
                         <div class="metadata">
                             <p class="author">
@@ -58,24 +51,10 @@
                                 <span ng-show="book.RequirementStatus" class="status">&nbsp;&nbsp;{{book.RequirementStatus}}</span>
                             </p>
                         </div>
-                        <div class="sellLinks">
-                            <!--
-                            <a class="offerBook noPhase1" href="" data-toggle="modal" data-target="#sellModal">Sell your copy</a>
-                            <a class="seeOffers noPhase1" ng-show="book.available" href="#/offers/{{book.id}}">
-                                Buy ({{book.available}} available)</span>
-                            </a>
-                            -->
-                            <div ng-show="book.ISBN">
-                                <a class="gotoVendor" target="_blank" href="http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords={{book.ISBN}}">Amazon</a>
-                                <a class="gotoVendor" target="_blank" href="http://www.gettextbooks.com/isbn/{{book.ISBN}}">Textbooks.com</a>
-                                <a class="gotoVendor" target="_blank" href=" http://www.booksprice.com/comparePrice.do?l=y&searchType=compare&inputData={{book.ISBN}}">BooksPrice.com</a>
-                            </div>
-                        </div>
                     </li>
                 </ul>
                 <!-- this info in this div not available in samples -->
                 <div ng-show="course.coursepack_location" class="coursePackInfo">
-
                     <small class="status" ng-show="course.coursepack_required">Coursepack Required.</small>
                     <small class="status" ng-hide="course.coursepack_required">Coursepack Not Required.</small>
                     <small class="" ng-show="course.coursepack_location">Coursepack location: {{course.coursepack_location}}</small></div>
@@ -87,9 +66,6 @@
                 <p class="visible-xs instructorInfo  ng-show="course.Instructor.Name"">
                     Instructor: {{course.Instructor.Name}} (<a href="mailto:{{course.Instructors.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
                 </p>
-                <div class="courseDescription">
-                    {{course.description}}
-                </div>
             </div>
         </div>
     </li>
