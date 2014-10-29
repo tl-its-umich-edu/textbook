@@ -1,71 +1,74 @@
+<h3>Courses with books listed</h3>
 <ul class="course-list">
-    <li ng-repeat="course in courses" class="courseItem">
-        <ul class="row" role="tablist">
-            <li class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                <div>
-                    <h2 class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
-                            <a href="{{course.Link}}" class="courseLink">{{course.Title}}</a>
-                        </div>
-                        <div class="col-lg-8  col-md-8 col-sm-8 hidden-xs">
-                            <small class ="instructorName" ng-show="course.Instructor.Name">
-                                {{course.Instructor.Name | fixInstructorName }} (<a href="mailto:{{course.Instructor.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
-                            </small>
-                            <small class ="instructorName" ng-hide="course.Instructor.Name || course.Instructor.length">
-                                Staff
-                            </small>
-                            <div ng-show="course.Instructor.length">
-                                <small class="instructorName" ng-repeat="instructor in course.Instructor | orderBy:'Role' | limitTo:1">
-                                Instructor: {{instructor.Name | fixInstructorName }} (<a href="mailto:{{instructor.Email | lowercase}}" class="mailTolink">{{instructor.Email | lowercase}}</a>)</small>
+    <li ng-repeat="course in courses" class="courseItem courseItemPrint"  ng-show="course.Textbook[0].Title">
+        <div>
+            <ul class="row" role="tablist">
+                <li class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <div>
+                        <h2 class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
+                                {{course.Title}}
                             </div>
+                            <div class="col-lg-8  col-md-8 col-sm-8 hidden-xs">
+                                <small class ="instructorName" ng-show="course.Instructor.Name">
+                                    {{course.Instructor.Name | fixInstructorName }} {{course.Instructor.Email | lowercase}})
+                                </small>
+                                <small class ="instructorName" ng-hide="course.Instructor.Name || course.Instructor.length">
+                                    Staff
+                                </small>
+                                <div ng-show="course.Instructor.length">
+                                    <small class="instructorName" ng-repeat="instructor in course.Instructor | orderBy:'Role' | limitTo:1">
+                                    Instructor: {{instructor.Name | fixInstructorName }} ({{instructor.Email | lowercase}})</small>
+                                </div>
 
+                            </div>
+                        </h2>
+                    </div>
+                </li>
+            </ul>
+            <div ng-show="course.Textbook.length || course.note || course.coursepack_location">
+                <div class="pane_print">
+                    <div class="visible-xs visible-sm instructorInfo">
+                        <div ng-show="course.Instructor.Name">
+                            {{course.Instructor.Name | fixInstructorName }} (<a href="mailto:{{course.Instructor.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
                         </div>
-                    </h2>
-                </div>
-            </li>
-        </ul>
-        <div ng-show="course.Textbook.length || course.note || course.coursepack_location">
-            <div class="pane_print">
-                <div class="visible-xs visible-sm instructorInfo">
-                    <div ng-show="course.Instructor.Name">
-                        {{course.Instructor.Name | fixInstructorName }} (<a href="mailto:{{course.Instructor.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
-                    </div>
-                    <div ng-hide="course.Instructor.Name || course.Instructor.length">
-                        Staff
-                    </div>
-                    <div ng-show="course.Instructor.length">
-                        <small ng-repeat="instructor in course.Instructor | orderBy:'Role'">
-                            {{instructor.Name | fixInstructorName }} (<a href="mailto:{{instructor.Email | lowercase}}" class="mailTolink">{{instructor.Email | lowercase}}</a>)<span ng-show="!$last">, </span>
-                        </small>
-                    </div>
-                </div>
-                <ul ng-show="course.Textbook">
-                    <li ng-repeat="book in course.Textbook" class="book_print" id="book{{$index}}">
-                        <h3 class="bookTitle">{{book.Title}}</h3>
-                        <div class="metadata">
-                            <p class="author">
-                                <span ng-show="book.Author">{{book.Author}} </span>
-                                <span ng-show="book.PubLocation">{{book.PubLocation}}.</span>
-                                <span ng-show="book.Publisher">{{book.Publisher}}:</span>
-                                <span ng-show="book.PubYear">{{book.PubYear}}.</span>
-                                <span ng-show="book.RequirementStatus" class="status">&nbsp;&nbsp;{{book.RequirementStatus}}</span>
-                            </p>
+                        <div ng-hide="course.Instructor.Name || course.Instructor.length">
+                            Staff
                         </div>
-                    </li>
-                </ul>
-                <!-- this info in this div not available in samples -->
-                <div ng-show="course.coursepack_location" class="coursePackInfo">
-                    <small class="status" ng-show="course.coursepack_required">Coursepack Required.</small>
-                    <small class="status" ng-hide="course.coursepack_required">Coursepack Not Required.</small>
-                    <small class="" ng-show="course.coursepack_location">Coursepack location: {{course.coursepack_location}}</small></div>
-                <p class="courseNote" ng-show="course.note">
-                    {{course.note}}
-                </p>
-            </div>
-            <div class="pane tab-pane infoPane">
-                <p class="visible-xs instructorInfo  ng-show="course.Instructor.Name"">
-                    Instructor: {{course.Instructor.Name}} (<a href="mailto:{{course.Instructors.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
-                </p>
+                        <div ng-show="course.Instructor.length">
+                            <small ng-repeat="instructor in course.Instructor | orderBy:'Role'">
+                                {{instructor.Name | fixInstructorName }} (<a href="mailto:{{instructor.Email | lowercase}}" class="mailTolink">{{instructor.Email | lowercase}}</a>)<span ng-show="!$last">, </span>
+                            </small>
+                        </div>
+                    </div>
+                    <ul ng-show="course.Textbook">
+                        <li ng-repeat="book in course.Textbook" class="book_print" id="book{{$index}}">
+                            <h3 class="bookTitle">{{book.Title}}</h3>
+                            <div class="metadata">
+                                <p class="author">
+                                    <span ng-show="book.Author">{{book.Author}} </span>
+                                    <span ng-show="book.PubLocation">{{book.PubLocation}}.</span>
+                                    <span ng-show="book.Publisher">{{book.Publisher}}:</span>
+                                    <span ng-show="book.PubYear">{{book.PubYear}}.</span>
+                                    <span ng-show="book.RequirementStatus" class="status">&nbsp;&nbsp;{{book.RequirementStatus}}</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- this info in this div not available in samples -->
+                    <div ng-show="course.coursepack_location" class="coursePackInfo">
+                        <small class="status" ng-show="course.coursepack_required">Coursepack Required.</small>
+                        <small class="status" ng-hide="course.coursepack_required">Coursepack Not Required.</small>
+                        <small class="" ng-show="course.coursepack_location">Coursepack location: {{course.coursepack_location}}</small></div>
+                    <p class="courseNote" ng-show="course.note">
+                        {{course.note}}
+                    </p>
+                </div>
+                <div class="pane tab-pane infoPane">
+                    <p class="visible-xs instructorInfo  ng-show="course.Instructor.Name"">
+                        Instructor: {{course.Instructor.Name}} (<a href="mailto:{{course.Instructors.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
+                    </p>
+                </div>
             </div>
         </div>
     </li>

@@ -121,9 +121,25 @@ non-boostrap styles
 .pane_print {
     padding: 0 10px 0 20px;
     margin-left:20px;
-
+    font-size:.8em;
+    border-top:1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
 
+.pane_print .bookTitle {
+  font-weight: normal
+}
+.pane_print .metadata {
+  margin-left:20px;
+}
+
+.pane_print .bookTitle:before{
+  font-family: 'Glyphicons Halflings';
+  font-size: 120%;
+  content:"\e157\00a0";
+  margin-left:-20px;
+  margin-top:4px;
+}
 .status {
   color: green;
   font-weight: bold;
@@ -138,12 +154,7 @@ non-boostrap styles
   border-bottom: 1px solid #ddd;
   padding: 10px
 }
-/*
-.book_print:before {
-  font-family: "Glyphicons Halflings";
-  content: "\e157"
-}
-*/
+
 .book h3 {
   font-size: 14px;
   line-height: 20px;
