@@ -17,6 +17,7 @@ You'll need:
 
 * ruby 1.9.3 ([rvm](https://rvm.io/) recommended for installation)
 * node 0.10.13 ([nvm](https://github.com/creationix/nvm) recommended for installation)
+* npm ([npm](http://nodejs.org/download/))
 * Two shell sessions!
 
 ### Session one: the rails backend:
@@ -29,24 +30,13 @@ bundle install
 bundle exec rails s -p 3000
 ```
 
-**NOTE**:  the angular application was generated using these commands. You may need to sudo for the node package manager things.
-
-```
-npm install yo
-npm install lodash
-npm install -g yo generator-angular
-mkdir ngapp; cd ngapp
-yo angular notes
-- select all options except for Bootstrap SASS
-```
-
 ### Session two: a grunt server
 
 ```
 nvm use 0.10.13 (optional)
 cd textbooks/ngapp
 npm install -g grunt-cli
+npm install -g bower
 npm install
-bower install
 grunt serve # opens a browser window... you are done!
 ```
