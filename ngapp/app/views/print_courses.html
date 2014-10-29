@@ -10,10 +10,10 @@
                                 {{course.Title}}
                             </div>
                             <div class="col-lg-8  col-md-8 col-sm-8 hidden-xs">
-                                <small class ="instructorName" ng-show="course.Instructor.Name">
+                                <small class ="instructorName" ng-show="course.Instructor.Name">aaa1
                                     {{course.Instructor.Name | fixInstructorName }} {{course.Instructor.Email | lowercase}})
                                 </small>
-                                <small class ="instructorName" ng-hide="course.Instructor.Name || course.Instructor.length">
+                                <small class ="instructorName" ng-hide="course.Instructor.Name || course.Instructor.length">aaa2
                                     Staff
                                 </small>
                                 <div ng-show="course.Instructor.length">
@@ -29,10 +29,10 @@
             <div ng-show="course.Textbook.length || course.note || course.coursepack_location">
                 <div class="pane_print">
                     <div class="visible-xs visible-sm instructorInfo">
-                        <div ng-show="course.Instructor.Name">
+                        <div ng-show="course.Instructor.Name">aaa3
                             {{course.Instructor.Name | fixInstructorName }} (<a href="mailto:{{course.Instructor.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
                         </div>
-                        <div ng-hide="course.Instructor.Name || course.Instructor.length">
+                        <div ng-hide="course.Instructor.Name || course.Instructor.length">aaa4
                             Staff
                         </div>
                         <div ng-show="course.Instructor.length">
@@ -55,19 +55,6 @@
                             </div>
                         </li>
                     </ul>
-                    <!-- this info in this div not available in samples -->
-                    <div ng-show="course.coursepack_location" class="coursePackInfo">
-                        <small class="status" ng-show="course.coursepack_required">Coursepack Required.</small>
-                        <small class="status" ng-hide="course.coursepack_required">Coursepack Not Required.</small>
-                        <small class="" ng-show="course.coursepack_location">Coursepack location: {{course.coursepack_location}}</small></div>
-                    <p class="courseNote" ng-show="course.note">
-                        {{course.note}}
-                    </p>
-                </div>
-                <div class="pane tab-pane infoPane">
-                    <p class="visible-xs instructorInfo  ng-show="course.Instructor.Name"">
-                        Instructor: {{course.Instructor.Name}} (<a href="mailto:{{course.Instructors.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
-                    </p>
                 </div>
             </div>
         </div>

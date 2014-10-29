@@ -119,15 +119,18 @@ non-boostrap styles
   background: #f2f2f2
 }
 .pane_print {
-    padding: 0 10px 0 20px;
-    margin-left:20px;
     font-size:.8em;
     border-top:1px solid #ccc;
     border-bottom: 1px solid #ccc;
 }
 
+.pane_print > ul {
+  margin-left:40px;
+}
 .pane_print .bookTitle {
-  font-weight: normal
+  font-weight: normal;
+    padding-left: 22px ;
+    text-indent: -22px ;
 }
 .pane_print .metadata {
   margin-left:20px;
