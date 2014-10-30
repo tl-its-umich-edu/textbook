@@ -38,6 +38,5 @@ sudo npm install -g grunt-cli
 sudo npm install -g bower
 npm install
 bower install
-gem install compass
 grunt serve # opens a browser window... you are done!
 ```
