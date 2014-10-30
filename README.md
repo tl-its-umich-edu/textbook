@@ -33,10 +33,11 @@ bundle exec rails s -p 3000
 ### Session two: a grunt server
 
 ```
-nvm use 0.10.13 (optional)
 cd textbooks/ngapp
-npm install -g grunt-cli
-npm install -g bower
+sudo npm install -g grunt-cli
+sudo npm install -g bower
 npm install
+bower install
+gem install compass
 grunt serve # opens a browser window... you are done!
 ```
