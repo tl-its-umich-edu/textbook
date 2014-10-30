@@ -20,6 +20,12 @@ You'll need:
 * npm ([npm](http://nodejs.org/download/))
 * Two shell sessions!
 
+### Configuration
+
+Put local_env.yml in textbook/config
+Put CERT files inside /Systems/Library/OpenSSL/certs/
+
+
 ### Session one: the rails backend:
 
 ```
