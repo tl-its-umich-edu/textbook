@@ -22,8 +22,8 @@ You'll need:
 
 ### Configuration
 
-Put local_env.yml in textbook/config
-Put CERT files inside /Systems/Library/OpenSSL/certs/
+* Put local_env.yml in textbook/config
+* Put CERT files inside /System/Library/OpenSSL/certs/
 
 
 ### Session one: the rails backend:
