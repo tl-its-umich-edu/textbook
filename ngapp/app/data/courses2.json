@@ -1,0 +1,366 @@
+[
+    {
+        "Title": "AAS 510",
+        "Subtitle": "Supervised Research",
+        "SectionNumber": "001",
+        "Source": "",
+        "Link": "",
+        "Textbook": {
+            "ItemType": "",
+            "ISBN": "",
+            "Title": "",
+            "Author": "",
+            "Edition": "",
+            "Publisher": "",
+            "PubLocation": "",
+            "PubYear": "",
+            "RequirementStatus": ""
+        }
+    },
+    {
+        "Title": "ASIANLAN 100",
+        "Subtitle": "Acc Elem Chinese",
+        "SectionNumber": "001",
+        "Source": "",
+        "Link": "",
+        "Instructor": [
+            {
+                "Name": "Emery,Lisa B",
+                "Role": "Secondary Instructor",
+                "Email": "EMERYL@umich.edu"
+            },
+            {
+                "Name": "Ford,Phyllis",
+                "Role": "Secondary Instructor",
+                "Email": "PAFORD@umich.edu"
+            },
+            {
+                "Name": "Zhong,Yan",
+                "Role": "Primary Instructor",
+                "Email": "YANZHO@umich.edu"
+            }
+        ],
+        "Textbook": [
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9780887276385",
+                "Title": "Integrated Chinese = Zhong wen ting shuo du xie : textbook simplified characters.",
+                "Author": "Yuehua Liu ... [et al.]",
+                "Edition": "3rd ed.",
+                "Publisher": "Cheng & Tsui",
+                "PubLocation": "Boston",
+                "PubYear": "2009",
+                "RequirementStatus": "Required"
+            },
+            {
+                "ItemType": "Other materials",
+                "ISBN": "",
+                "Title": "Integrated Chinese, Level 1 Part 1 Online Workbook, Student Access Code (Email)\nISBN: 9780887277450",
+                "Author": "",
+                "Edition": "",
+                "Publisher": "",
+                "PubLocation": "",
+                "PubYear": "",
+                "RequirementStatus": "Required"
+            }
+        ]
+    },
+    {
+        "Title": "BA 528",
+        "Subtitle": "Tools for Discovery",
+        "SectionNumber": "001",
+        "Source": "",
+        "Link": "",
+        "Instructor": {
+            "Name": "Brown,Christina L",
+            "Role": "Primary Instructor",
+            "Email": "CLBROWN@umich.edu"
+        },
+        "Textbook": {
+            "ItemType": "",
+            "ISBN": "",
+            "Title": "",
+            "Author": "",
+            "Edition": "",
+            "Publisher": "",
+            "PubLocation": "",
+            "PubYear": "",
+            "RequirementStatus": ""
+        }
+    },
+    {
+        "Title": "BA 831",
+        "Subtitle": "Teaching Practicum",
+        "SectionNumber": "001",
+        "Source": "",
+        "Link": "",
+        "Instructor": {
+            "Name": "Bird,Karen S",
+            "Role": "Primary Instructor",
+            "Email": "BIRDK@umich.edu"
+        },
+        "Textbook": {
+            "ItemType": "",
+            "ISBN": "",
+            "Title": "",
+            "Author": "",
+            "Edition": "",
+            "Publisher": "",
+            "PubLocation": "",
+            "PubYear": "",
+            "RequirementStatus": ""
+        }
+    },
+    {
+        "Title": "BCOM 522",
+        "Subtitle": "Managerial Writing",
+        "SectionNumber": "001",
+        "Source": "",
+        "Link": "",
+        "Instructor": {
+            "Name": "Galifianakis,Sophia",
+            "Role": "Primary Instructor",
+            "Email": "GALIS@umich.edu"
+        },
+        "Textbook": {
+            "ItemType": "",
+            "ISBN": "",
+            "Title": "",
+            "Author": "",
+            "Edition": "",
+            "Publisher": "",
+            "PubLocation": "",
+            "PubYear": "",
+            "RequirementStatus": ""
+        }
+    },
+    {
+        "Title": "BIOLOGY 100",
+        "Subtitle": "Biol for Nonsci",
+        "SectionNumber": "001",
+        "Source": "",
+        "Link": "",
+        "Instructor": {
+            "Name": "Kurdziel,Josephine P",
+            "Role": "Primary Instructor",
+            "Email": "JOSEPHAK@umich.edu"
+        },
+        "Textbook": {
+            "ItemType": "",
+            "ISBN": "",
+            "Title": "",
+            "Author": "",
+            "Edition": "",
+            "Publisher": "",
+            "PubLocation": "",
+            "PubYear": "",
+            "RequirementStatus": ""
+        }
+    },
+    {
+        "Title": "BIOLOGY 100",
+        "Subtitle": "Biol for Nonsci",
+        "SectionNumber": "002",
+        "Source": "",
+        "Link": "",
+        "Textbook": {
+            "ItemType": "",
+            "ISBN": "",
+            "Title": "",
+            "Author": "",
+            "Edition": "",
+            "Publisher": "",
+            "PubLocation": "",
+            "PubYear": "",
+            "RequirementStatus": ""
+        }
+    },
+    {
+        "Title": "EARTH 115",
+        "Subtitle": "Emerald Planet",
+        "SectionNumber": "002",
+        "Source": "",
+        "Link": "",
+        "Instructor": {
+            "Name": "Smith,Selena Y",
+            "Role": "Primary Instructor",
+            "Email": "SYSMITH@umich.edu"
+        },
+        "Textbook": null
+    },
+    {
+        "Title": "ENGLISH 221",
+        "Subtitle": "Lit Outside Classrm",
+        "SectionNumber": "001",
+        "Source": "Canvas",
+        "Link": "https://umich.instructure.com/courses/37",
+        "Instructor": [
+            {
+                "Name": "Groce,Marian Renee",
+                "Role": "Secondary Instructor",
+                "Email": "MARIANGR@umich.edu"
+            },
+            {
+                "Name": "Levad,Megan",
+                "Role": "Primary Instructor",
+                "Email": "MSLEVAD@umich.edu"
+            }
+        ],
+        "Textbook": [
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9780585013367",
+                "Title": "Pride and prejudice",
+                "Author": "Austen, Jane, 1775-1817.",
+                "Edition": "",
+                "Publisher": "Project Gutenberg",
+                "PubLocation": "",
+                "PubYear": "199-",
+                "RequirementStatus": "Required"
+            },
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9780585010083",
+                "Title": "Sense and sensibility",
+                "Author": "Austen, Jane, 1775-1817.",
+                "Edition": "",
+                "Publisher": "Project Gutenberg",
+                "PubLocation": "",
+                "PubYear": "199-",
+                "RequirementStatus": "Required"
+            }
+        ]
+    },
+    {
+        "Title": "MOVESCI 231",
+        "Subtitle": "Hum Musculo Anat Lab",
+        "SectionNumber": "001",
+        "Source": "",
+        "Link": "",
+        "Instructor": [
+            {
+                "Name": "Emery,Lisa B",
+                "Role": "Secondary Instructor",
+                "Email": "EMERYL@umich.edu"
+            },
+            {
+                "Name": "Ford,Phyllis",
+                "Role": "Secondary Instructor",
+                "Email": "PAFORD@umich.edu"
+            },
+            {
+                "Name": "Guerin,Karen Ellen",
+                "Role": "Primary Instructor",
+                "Email": "KGUERIN@umich.edu"
+            },
+            {
+                "Name": "Kulkarni,Swetha",
+                "Role": "Secondary Instructor",
+                "Email": "SWETHAK@umich.edu"
+            }
+        ],
+        "Textbook": [
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9780895828088",
+                "Title": "An illustrated atlas of the skeletal muscles",
+                "Author": "Bradley S. Bowden, Joan M. Bowden.",
+                "Edition": "3rd ed.",
+                "Publisher": "Morton",
+                "PubLocation": "Englewood, CO",
+                "PubYear": "2005",
+                "RequirementStatus": "Required"
+            },
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9780618474776",
+                "Title": "Drama essentials : an anthology of plays",
+                "Author": "[selected and edited by] Matthew Roudane.",
+                "Edition": "",
+                "Publisher": "Houghton Mifflin",
+                "PubLocation": "Boston, MA",
+                "PubYear": "2009",
+                "RequirementStatus": "Required"
+            },
+            {
+                "ItemType": "Other materials",
+                "ISBN": "",
+                "Title": "Netter's Anatomy Atlas (Version 1.1.18 or higher),  Frank H. Netter, Elsevier Inc., 2012 -  app available from iTunes",
+                "Author": "",
+                "Edition": "",
+                "Publisher": "",
+                "PubLocation": "",
+                "PubYear": "",
+                "RequirementStatus": "Required"
+            },
+            {
+                "ItemType": "Textbook",
+                "ISBN": "0812971833",
+                "Title": "Olive Kitteridge",
+                "Author": "Elizabeth Strout.",
+                "Edition": "Random Hou",
+                "Publisher": "Random House Trade Paperbacks",
+                "PubLocation": "New York",
+                "PubYear": "2008",
+                "RequirementStatus": "Optional"
+            },
+            {
+                "ItemType": "Other materials",
+                "ISBN": "",
+                "Title": "Atlas Of Human Anatomy: with Student Consult Access, 5th edition,  Frank H. Netter MD, Saunders, Philadelphia, PA, 2010, ISBN-13: 978-1416059516",
+                "Author": "",
+                "Edition": "",
+                "Publisher": "",
+                "PubLocation": "",
+                "PubYear": "",
+                "RequirementStatus": "Optional"
+            },
+            {
+                "ItemType": "Other materials",
+                "ISBN": "",
+                "Title": "Visible Body: Muscle Premium,  Argosy Publishing, Inc., 2007-2013, \nfor PC or Mac, or iPad/iPhone   http://www.visiblebody.com/muscular_overview/",
+                "Author": "",
+                "Edition": "",
+                "Publisher": "",
+                "PubLocation": "",
+                "PubYear": "",
+                "RequirementStatus": "Optional"
+            }
+        ]
+    },
+    {
+        "Title": "WOMENSTD 150",
+        "Subtitle": "Sem Women&Gender",
+        "SectionNumber": "001",
+        "Source": "CTools",
+        "Link": "http://ctools.umich.edu/portal/site/000ca2d7-7102-4743-be35-1aed627266bb",
+        "Instructor": [
+            {
+                "Name": "Goodman,Dena",
+                "Role": "Primary Instructor",
+                "Email": "GOODMAND@umich.edu"
+            },
+            {
+                "Name": "Groce,Marian Renee",
+                "Role": "Secondary Instructor",
+                "Email": "MARIANGR@umich.edu"
+            },
+            {
+                "Name": "Lyke-Whiting,Lynn",
+                "Role": "Secondary Instructor",
+                "Email": "LYNNW@umich.edu"
+            }
+        ],
+        "Textbook": {
+            "ItemType": "",
+            "ISBN": "",
+            "Title": "",
+            "Author": "",
+            "Edition": "",
+            "Publisher": "",
+            "PubLocation": "",
+            "PubYear": "",
+            "RequirementStatus": ""
+        }
+    }
+]

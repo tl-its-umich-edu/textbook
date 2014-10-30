@@ -56,6 +56,10 @@ ul li:last-child {
   border-style: solid
 }
 
+.nav-tabs > li a{
+  display:inline-block;
+}
+
 .nav-tabs > li.fake > div {
   line-height: 40px
 }
@@ -86,10 +90,10 @@ a.pseudolink {
   background: none
 }
 
-a.pseudolink:hover {
+.navTabs  a.pseudolink:hover {
   background: #fff !important;
   border-color: #fff #fff #ddd #fff !important;
-  border:transparent;
+  border-width: 1px;
   cursor: text;
 }
 
@@ -114,7 +118,31 @@ non-boostrap styles
   padding: 0 10px;
   background: #f2f2f2
 }
+.pane_print {
+    font-size:.8em;
+    border-top:1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
 
+.pane_print > ul {
+  margin-left:40px;
+}
+.pane_print .bookTitle {
+  font-weight: normal;
+    padding-left: 22px ;
+    text-indent: -22px ;
+}
+.pane_print .metadata {
+  margin-left:20px;
+}
+
+.pane_print .bookTitle:before{
+  font-family: 'Glyphicons Halflings';
+  font-size: 120%;
+  content:"\e157\00a0";
+  margin-left:-20px;
+  margin-top:4px;
+}
 .status {
   color: green;
   font-weight: bold;
@@ -131,8 +159,8 @@ non-boostrap styles
 }
 
 .book h3 {
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 20px;
   margin:10px 0;
   padding:0;
 }
@@ -176,7 +204,9 @@ non-boostrap styles
   padding: 0;
   border-bottom: 0;
 }
-
+.courseLink {
+  white-space:nowrap;
+}
 /*
  angular animations for desktop
  */

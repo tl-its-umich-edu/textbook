@@ -1,49 +1,61 @@
 <ul class="course-list">
     <li ng-repeat="course in courses" class="courseItem">
         <ul class="nav nav-tabs row navTabs" role="tablist">
-            <li class="fake col-md-8">
+            <li class="fake col-lg-8 col-md-8 col-sm-8 col-xs-8">
                 <div>
                     <h2 class="row">
-                        <div class="col-md-4">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
                             <a href="{{course.Link}}" class="courseLink">{{course.Title}}</a>
                         </div>
-                        <div class="col-md-8 hidden-xs hidden-sm">
+                        <div class="col-lg-8  col-md-8 col-sm-8 hidden-xs">
                             <small class ="instructorName" ng-show="course.Instructor.Name">
                                 {{course.Instructor.Name | fixInstructorName }} (<a href="mailto:{{course.Instructor.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
                             </small>
-                            <small class ="hidden-xs instructorName" ng-hide="course.Instructor.Name">
+                            <small class ="instructorName" ng-hide="course.Instructor.Name || course.Instructor.length">
                                 Staff
                             </small>
+                            <div ng-show="course.Instructor.length">
+                                <small class="instructorName" ng-repeat="instructor in course.Instructor | orderBy:'Role' | limitTo:1">
+                                Instructor: {{instructor.Name | fixInstructorName }} (<a href="mailto:{{instructor.Email | lowercase}}" class="mailTolink">{{instructor.Email | lowercase}}</a>)</small>
+                            </div>
+
                         </div>
                     </h2>
                 </div>
             </li>
-            <li class="col-md-2">
+            <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:right">
                 <a ng-show="course.Textbook.length || course.note || course.coursepack_location" class="booksControl" href="" role="tab">Books</a>
-                
-                <a ng-hide="course.Textbook.length || course.note || course.coursepack_location" class="pseudolink"></a>
-                
-            </li>
-            <li class="col-md-2 hidden-xs hidden-sm">
+                <a ng-hide="course.Textbook.length || course.note || course.coursepack_location" class="pseudolink">Books</a>
+                <li class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="text-align:right">
                 <a ng-show="course.description" class="infoControl" href="" role="tab">Info</a>
-                <a ng-hide="course.description" class="pseudolink"></a>
+                <a ng-hide="course.description" class="pseudolink">Info</a>
             </li>
         </ul>
         <div class="tab-content">
             <div class="pane booksPane tab-pane">
-                <p class="visible-xs visible-sm instructorInfo"  ng-show="course.Instructor.Name">
-                    Instructor: {{course.Instructor.Name | fixInstructorName }} (<a href="mailto:{{course.Instructor.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
-                </p>
+                <div class="visible-xs visible-sm instructorInfo">
+                    <div ng-show="course.Instructor.Name">
+                        {{course.Instructor.Name | fixInstructorName }} (<a href="mailto:{{course.Instructor.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
+                    </div>
+                    <div ng-hide="course.Instructor.Name || course.Instructor.length">
+                        Staff
+                    </div>
+                    <div ng-show="course.Instructor.length">
+                        <small ng-repeat="instructor in course.Instructor | orderBy:'Role'">
+                            {{instructor.Name | fixInstructorName }} (<a href="mailto:{{instructor.Email | lowercase}}" class="mailTolink">{{instructor.Email | lowercase}}</a>)<span ng-show="!$last">, </span>
+                        </small>
+                    </div>
+                </div>
                 <ul ng-show="course.Textbook">
                     <li ng-repeat="book in course.Textbook" class="book" id="book{{$index}}">
                         <h3 class="bookTitle">{{book.Title}}</h3>
                         <div class="metadata">
                             <p class="author">
-                                <span ng-show="book.Author">{{book.Author}}</span>.
-                                <span ng-show="book.PubLocation" class="visible-lg-inline visible-md-inline">{{book.PubLocation}}:</span>
-                                <span ng-show="book.Publisher">{{book.Publisher}},</span>
+                                <span ng-show="book.Author">{{book.Author}} </span>
+                                <span ng-show="book.PubLocation">{{book.PubLocation}}.</span>
+                                <span ng-show="book.Publisher">{{book.Publisher}}:</span>
                                 <span ng-show="book.PubYear">{{book.PubYear}}.</span>
-                                <span ng-show="book.RequirementStatus" class="status"> {{book.RequirementStatus}}</span>
+                                <span ng-show="book.RequirementStatus" class="status">&nbsp;&nbsp;{{book.RequirementStatus}}</span>
                             </p>
                         </div>
                         <div class="sellLinks">
@@ -53,12 +65,11 @@
                                 Buy ({{book.available}} available)</span>
                             </a>
                             -->
-                            <a class="gotoVendor" target="_blank" href="http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords={{book.ISBN}}">Amazon</a>
-                            <a class="gotoVendor" target="_blank" href="http://www.gettextbooks.com/isbn/{{book.ISBN}}">Textbooks.com</a>
-                            <a class="gotoVendor" target="_blank" href="http://www.bookfinder.com/search/?isbn={{book.ISBN}}&mode=isbn&st=sr&ac=qr">BookFinder</a>
-                            <a class="gotoVendor" target="_blank" href="http://www.abebooks.com/servlet/SearchResults?sts=t&isbn={{book.ISBN}}">AbeBooks</a>
-
-                            
+                            <div ng-show="book.ISBN">
+                                <a class="gotoVendor" target="_blank" href="http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords={{book.ISBN}}">Amazon</a>
+                                <a class="gotoVendor" target="_blank" href="http://www.gettextbooks.com/isbn/{{book.ISBN}}">Textbooks.com</a>
+                                <a class="gotoVendor" target="_blank" href=" http://www.booksprice.com/comparePrice.do?l=y&searchType=compare&inputData={{book.ISBN}}">BooksPrice.com</a>
+                            </div>
                         </div>
                     </li>
                 </ul>
