@@ -28,7 +28,7 @@ Rails.application.configure do
 
   config.middleware.use Rack::Cors do
 	  allow do
-		  origins 'localhost:9000'
+		  origins '0.0.0.0:9000'
 		  resource '*', :headers => :any, :methods => [:get, :post, :options, :delete]
 	  end
   end

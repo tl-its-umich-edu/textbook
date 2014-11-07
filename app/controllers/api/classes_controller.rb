@@ -17,9 +17,9 @@ class Api::ClassesController < ApplicationController
 
 		# get the environment variables
 		# developement, test, production?
-		rails_env = ENV["RAILS_ENV"]
+		rails_env = "#{ENV["RAILS_ENV"]}_api_key_secret"
 		# format: key=KEY,secret=secret
-		env_array = ENV[rails_env + "_api_key_secret"].split(',')
+		env_array = ENV[rails_env].split(',')
 		key_array=env_array[0].split('=')
 		key=key_array[1]
 		secret_array=env_array[1].split('=')
