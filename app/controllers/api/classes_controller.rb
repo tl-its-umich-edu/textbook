@@ -7,6 +7,10 @@ require "rest-client"
 
 class Api::ClassesController < ApplicationController
 
+	# path for two cert files
+	$caRootFilePath =""
+	$inCommonFilePath =""
+
 	def index
 
 		#the return json object
@@ -28,6 +32,10 @@ class Api::ClassesController < ApplicationController
 		url=url_array[1]
 		token_url_array=env_array[3].split('=')
 		token_url=token_url_array[1]
+		caRootFilePath_array=env_array[4].split('=')
+		$caRootFilePath=caRootFilePath_array[1]
+		inCommonFilePath_array=env_array[5].split('=')
+		$inCommonFilePath=inCommonFilePath_array[1]
 
 		#get the current token
 		access_token = refresh_token(key, secret, token_url)
@@ -92,8 +100,8 @@ class Api::ClassesController < ApplicationController
 		sock.use_ssl=true
 
 		store = OpenSSL::X509::Store.new
-		store.add_cert(OpenSSL::X509::Certificate.new(File.read("/System/Library/OpenSSL/certs/AddTrustExternalCARoot.txt")))
-		store.add_cert(OpenSSL::X509::Certificate.new(File.read("/System/Library/OpenSSL/certs/InCommonServerCA.txt")))
+		store.add_cert(OpenSSL::X509::Certificate.new(File.read($caRootFilePath)))
+		store.add_cert(OpenSSL::X509::Certificate.new(File.read($inCommonFilePath)))
 		sock.cert_store = store
 
 		#sock.set_debug_output $stdout #useful to see the raw messages going over the wire
