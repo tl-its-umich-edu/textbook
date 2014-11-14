@@ -16,7 +16,7 @@
                             </small>
                             <div ng-show="course.Instructor.length">
                                 <small class="instructorName" ng-repeat="instructor in course.Instructor | orderBy:'Role' | limitTo:1">
-                                Instructor: {{instructor.Name | fixInstructorName }} (<a href="mailto:{{instructor.Email | lowercase}}" class="mailTolink">{{instructor.Email | lowercase}}</a>)</small>
+                                {{instructor.Name | fixInstructorName }} (<a href="mailto:{{instructor.Email | lowercase}}" class="mailTolink">{{instructor.Email | lowercase}}</a>)</small>
                             </div>
 
                         </div>

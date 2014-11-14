@@ -7,7 +7,8 @@
         "angular-animate": "~1.2.0",
         "angular-truncate": "latest",
         "angular-route": "~1.2.0",
-        "momentjs":"latest"
+        "momentjs":"latest",
+        "underscore":"latest"
     },
     "devDependencies": {
     },

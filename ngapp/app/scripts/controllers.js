@@ -1,4 +1,7 @@
-/*jshint strict:false */
+'use strict';
+/* jshint  strict: true*/
+/* global $, _,  angular */
+
 
 var textApp = angular.module('textApp', ['textBookFilters', 'ngRoute', 'ngAnimate','truncate']);
 
@@ -42,7 +45,13 @@ textApp.controller('coursesController', ['$scope', '$http', function($scope, $ht
             }
         }
     ).success(function(data){
-        $scope.courses= data;
+          $.each(data, function (i, l) {
+            l.Instructor = _.filter(l.Instructor, function (instructor) {
+              return instructor.Role !== 'Dummy';
+            });
+          });
+          $scope.courses= data;
+
     });
 }
 ]);
