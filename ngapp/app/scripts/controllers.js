@@ -5,6 +5,16 @@
 
 var textApp = angular.module('textApp', ['textBookFilters', 'ngRoute', 'ngAnimate','truncate']);
 
+
+/**
+ * get the current AngularJS url
+ * @returns {string|*}
+ */
+function getRailsUrl() {
+    url = location.protocol + "//" + location.host;
+    url = url.replace(location.port, '3000');
+    return url;
+
 textApp.config(function($routeProvider){
     //routes
     $routeProvider.when('/', {
@@ -34,7 +44,7 @@ textApp.config(function($routeProvider){
 });
 
 textApp.controller('coursesController', ['$scope', '$http', function($scope, $http){
-    var url = 'http://localhost:3000/api/v1/classes.json';
+    var url = getRailsUrl() + '/api/v1/classes.json';
     //below for testing    
     //var url = 'data/courses2.json';
 
@@ -57,7 +67,7 @@ textApp.controller('coursesController', ['$scope', '$http', function($scope, $ht
 ]);
 
 textApp.controller('offersController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
-    var url = 'http://localhost:3000/api/v1/booksforsale/' + $routeParams.bookId + '.json';
+    var url = getRailsUrl() + '/api/v1/booksforsale/' + $routeParams.bookId + '.json';
     $http.get(url).success(function(data){
         $scope.offers = data.offers;
     });
@@ -65,7 +75,7 @@ textApp.controller('offersController', ['$scope', '$http', '$routeParams', funct
 ]);
 
 textApp.controller('uBookController', ['$scope', '$http',  function($scope, $http){
-    var url = 'http://localhost:3000/api/v1/myoffers.json';
+    var url = 'getRailsUrl() + '/api/v1/myoffers.json';
     $http.get(url).success(function(data){
         $scope.books = data.books;
     });
