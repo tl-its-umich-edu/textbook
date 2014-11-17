@@ -11,9 +11,9 @@ var textApp = angular.module('textApp', ['textBookFilters', 'ngRoute', 'ngAnimat
  * @returns {string|*}
  */
 function getRailsUrl() {
-    url = location.protocol + "//" + location.host;
-    url = url.replace(location.port, '3000');
-    return url;
+    var url = location.protocol + "//" + location.host;
+    return  url.replace(location.port, "3000");
+}
 
 textApp.config(function($routeProvider){
     //routes
@@ -75,7 +75,7 @@ textApp.controller('offersController', ['$scope', '$http', '$routeParams', funct
 ]);
 
 textApp.controller('uBookController', ['$scope', '$http',  function($scope, $http){
-    var url = 'getRailsUrl() + '/api/v1/myoffers.json';
+    var url = getRailsUrl() + '/api/v1/myoffers.json';
     $http.get(url).success(function(data){
         $scope.books = data.books;
     });
