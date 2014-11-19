@@ -1,0 +1,185 @@
+[
+    {
+        "Title": "AMCULT 217",
+        "Subtitle": "1 textbook",
+        "SectionNumber": "001",
+        "Source": "CTools",
+        "Link": "https://ctools.umich.edu/portal/site/fb4e7013-8542-4bf6-988b-4ab43da04ac9",
+        "Instructor": [
+            {
+                "Name": "Dummy",
+                "Role": "Dummy",
+                "Email": "Dummy"
+            },
+            {
+                "Name": "Dummy",
+                "Role": "Dummy",
+                "Email": "Dummy"
+            },
+            {
+                "Name": "Daubenmier,Judith Marie",
+                "Role": "Primary Instructor",
+                "Email": "JDAUBENM@umich.edu"
+            }
+        ],
+        "Textbook": [
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9780199855599",
+                "Title": "Hippies, Indians, and the fight for red power",
+                "Author": "Sherry L. Smith.",
+                "Edition": "",
+                "Publisher": "Oxford University Press",
+                "PubLocation": "Oxford",
+                "PubYear": "2012",
+                "RequirementStatus": "Required"
+            }
+        ]
+    },
+    {
+        "Title": "AMCULT 217",
+        "Subtitle": "1 textbook",
+        "SectionNumber": "002",
+        "Source": "",
+        "Link": "",
+        "Instructor": [
+            {
+                "Name": "Dummy",
+                "Role": "Dummy",
+                "Email": "Dummy"
+            },
+            {
+                "Name": "Dummy",
+                "Role": "Dummy",
+                "Email": "Dummy"
+            },
+            {
+                "Name": "Gaudet,Joseph",
+                "Role": "Primary Instructor",
+                "Email": "GAUDETJ@umich.edu"
+            }
+        ],
+        "Textbook": [
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9780199855599",
+                "Title": "Hippies, Indians, and the fight for red power",
+                "Author": "Sherry L. Smith.",
+                "Edition": "",
+                "Publisher": "Oxford University Press",
+                "PubLocation": "Oxford",
+                "PubYear": "2012",
+                "RequirementStatus": "Required"
+            }
+        ]
+    },
+    {
+        "Title": "MKT 408",
+        "Subtitle": "1 textbook",
+        "SectionNumber": "001",
+        "Source": "CTools",
+        "Link": "https://ctools.umich.edu/portal/site/86ace032-586d-4fc8-a25e-8c866f30f2a0",
+        "Instructor": [
+            {
+                "Name": "Dummy",
+                "Role": "Dummy",
+                "Email": "Dummy"
+            },
+            {
+                "Name": "Dummy",
+                "Role": "Dummy",
+                "Email": "Dummy"
+            },
+            {
+                "Name": "Krishna,Aradhna J",
+                "Role": "Primary Instructor",
+                "Email": "ARADHNA@umich.edu"
+            }
+        ],
+        "Textbook": [
+            {
+                "ItemType": "Textbook",
+                "ISBN": "0136106811",
+                "Title": "The strategy and tactics of pricing : a guide to growing more profitably",
+                "Author": "Thomas T. Nagle, John E. Hogan, Joseph Zale.",
+                "Edition": "5th ed.",
+                "Publisher": "Prentice Hall",
+                "PubLocation": "Boston",
+                "PubYear": "2010",
+                "RequirementStatus": "Required"
+            }
+        ]
+    },
+    {
+        "Title": "STRATEGY 390",
+        "Subtitle": "0 textbook",
+        "SectionNumber": "004",
+        "Source": "CTools",
+        "Link": "https://ctools.umich.edu/portal/site/e61644b5-4168-4da3-ba68-71be4dcd07cf",
+        "Instructor": [
+            {
+                "Name": "Dummy",
+                "Role": "Dummy",
+                "Email": "Dummy"
+            },
+            {
+                "Name": "Dummy",
+                "Role": "Dummy",
+                "Email": "Dummy"
+            },
+            {
+                "Name": "Ostler,James Owen",
+                "Role": "Primary Instructor",
+                "Email": "JOSTLER@umich.edu"
+            }
+        ]
+    },
+    {
+        "Title": "TO 411",
+        "Subtitle": "2 or more textbooks",
+        "SectionNumber": "001",
+        "Source": "CTools",
+        "Link": "https://ctools.umich.edu/portal/site/168a9995-dfee-4404-abfe-081d3fc8de47",
+        "Instructor": [
+            {
+                "Name": "Dummy",
+                "Role": "Dummy",
+                "Email": "Dummy"
+            },
+            {
+                "Name": "Dummy",
+                "Role": "Dummy",
+                "Email": "Dummy"
+            },
+            {
+                "Name": "Walls,Joseph G",
+                "Role": "Primary Instructor",
+                "Email": "JGWALLS@umich.edu"
+            }
+        ],
+        "Textbook": [
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9781118490372",
+                "Title": "Excel VBA Programming for Dummies",
+                "Author": "John Walkenbach",
+                "Edition": "3RD",
+                "Publisher": "John Wiley & Sons",
+                "PubLocation": "Hoboken, NJ",
+                "PubYear": "2013",
+                "RequirementStatus": "Required"
+            },
+            {
+                "ItemType": "Textbook",
+                "ISBN": "1285169336",
+                "Title": "New perspectives on Microsoft Office Excel 2013.",
+                "Author": "Roy Ageloff, June Jamrich Parsons, Dan Oja, Patrick Carey.",
+                "Edition": "",
+                "Publisher": "",
+                "PubLocation": "",
+                "PubYear": "2013",
+                "RequirementStatus": "Required"
+            }
+        ]
+    }
+]

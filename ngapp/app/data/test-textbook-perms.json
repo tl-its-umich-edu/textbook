@@ -1,0 +1,193 @@
+[
+    {
+        "Title": "AMCULT 217",
+        "Subtitle": "Subtitle text",
+        "SectionNumber": "001",
+        "Source": "CTools",
+        "Link": "https://ctools.umich.edu/portal/site/fb4e7013-8542-4bf6-988b-4ab43da04ac9",
+        "Instructor": [
+            {
+                "Name": "Dummy",
+                "Role": "Dummy",
+                "Email": "Dummy"
+            },
+            {
+                "Name": "Dummy",
+                "Role": "Dummy",
+                "Email": "Dummy"
+            },
+            {
+                "Name": "Daubenmier,Judith Marie",
+                "Role": "Primary Instructor",
+                "Email": "JDAUBENM@umich.edu"
+            }
+        ],
+        "Textbook": [
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9780199855599",
+                "Title": "Hippies, Indians, and the fight for red power",
+                "Author": "Sherry L. Smith.",
+                "Edition": "2nd",
+                "Publisher": "Oxford University Press",
+                "PubLocation": "Oxford",
+                "PubYear": "2012",
+                "RequirementStatus": "Required",
+                "Comments": "Some comments. This texbook has ItemType, ISBN, Title, Author, Edition, Publisher, PubLocation, PubYear, RequirementStatus, Comments, (OnReserve, EditionOk, LateUse all set to true)",
+                "OnReserve": true,
+                "EditionOk": true,
+                "LateUse": true
+            },
+            {
+                "ItemType": "Textbook",
+                "ISBN": "",
+                "Title": "Hippies, Indians, and the fight for red power",
+                "Author": "Sherry L. Smith.",
+                "Edition": "2nd",
+                "Publisher": "Oxford University Press",
+                "PubLocation": "Oxford",
+                "PubYear": "2012",
+                "RequirementStatus": "Required",
+                "Comments": "Some comments. This texbook has ItemType, NO ISBN, Title, Author, Edition, Publisher, PubLocation, PubYear, RequirementStatus, Comments, (OnReserve, EditionOk, LateUse all set to true)",
+                "OnReserve": true,
+                "EditionOk": true,
+                "LateUse": true
+            },
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9780199855599",
+                "Title": "",
+                "Author": "Sherry L. Smith.",
+                "Edition": "2nd",
+                "Publisher": "Oxford University Press",
+                "PubLocation": "Oxford",
+                "PubYear": "2012",
+                "RequirementStatus": "Required",
+                "Comments": "Some comments. This texbook has ItemType, ISBN, NO Title, Author, Edition, Publisher, PubLocation, PubYear, RequirementStatus, Comments, (OnReserve, EditionOk, LateUse all set to true)",
+                "OnReserve": true,
+                "EditionOk": true,
+                "LateUse": true
+            },
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9780199855599",
+                "Title": "Hippies, Indians, and the fight for red power",
+                "Author": "",
+                "Edition": "2nd",
+                "Publisher": "Oxford University Press",
+                "PubLocation": "Oxford",
+                "PubYear": "2012",
+                "RequirementStatus": "Required",
+                "Comments": "Some comments. This texbook has ItemType, ISBN, Title, NO Author, Edition, Publisher, PubLocation, PubYear, RequirementStatus, Comments, (OnReserve, EditionOk, LateUse all set to true)",
+                "OnReserve": true,
+                "EditionOk": true,
+                "LateUse": true
+            },
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9780199855599",
+                "Title": "Hippies, Indians, and the fight for red power",
+                "Author": "Sherry L. Smith.",
+                "Edition": "",
+                "Publisher": "Oxford University Press",
+                "PubLocation": "Oxford",
+                "PubYear": "2012",
+                "RequirementStatus": "Required",
+                "Comments": "Some comments. This texbook has ItemType, ISBN, Title, Author, NO Edition, Publisher, PubLocation, PubYear, RequirementStatus, Comments, (OnReserve, EditionOk, LateUse all set to true)",
+                "OnReserve": true,
+                "EditionOk": true,
+                "LateUse": true
+            },
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9780199855599",
+                "Title": "Hippies, Indians, and the fight for red power",
+                "Author": "Sherry L. Smith.",
+                "Edition": "2nd",
+                "Publisher": "",
+                "PubLocation": "Oxford",
+                "PubYear": "2012",
+                "RequirementStatus": "Required",
+                "Comments": "Some comments. This texbook has ItemType, ISBN, Title, Author, Edition, NO Publisher, PubLocation, PubYear, RequirementStatus, Comments, (OnReserve, EditionOk, LateUse all set to true)",
+                "OnReserve": true,
+                "EditionOk": true,
+                "LateUse": true
+            },
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9780199855599",
+                "Title": "Hippies, Indians, and the fight for red power",
+                "Author": "Sherry L. Smith.",
+                "Edition": "2nd",
+                "Publisher": "Oxford University Press",
+                "PubLocation": "",
+                "PubYear": "2012",
+                "RequirementStatus": "Required",
+                "Comments": "Some comments. This texbook has ItemType, ISBN, Title, Author, Edition, Publisher, NO PubLocation, PubYear, RequirementStatus, Comments, (OnReserve, EditionOk, LateUse all set to true)",
+                "OnReserve": true,
+                "EditionOk": true,
+                "LateUse": true
+            },
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9780199855599",
+                "Title": "Hippies, Indians, and the fight for red power",
+                "Author": "Sherry L. Smith.",
+                "Edition": "2nd",
+                "Publisher": "Oxford University Press",
+                "PubLocation": "Oxford",
+                "PubYear": "",
+                "RequirementStatus": "Required",
+                "Comments": "Some comments. This texbook has ItemType, ISBN, Title, Author, Edition, Publisher, PubLocation, NO PubYear, RequirementStatus, Comments, (OnReserve, EditionOk, LateUse all set to true)",
+                "OnReserve": true,
+                "EditionOk": true,
+                "LateUse": true
+            },
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9780199855599",
+                "Title": "Hippies, Indians, and the fight for red power",
+                "Author": "Sherry L. Smith.",
+                "Edition": "2nd",
+                "Publisher": "Oxford University Press",
+                "PubLocation": "Oxford",
+                "PubYear": "2012",
+                "RequirementStatus": "",
+                "Comments": "Some comments. This texbook has ItemType, ISBN, Title, Author, Edition, Publisher, PubLocation, PubYear, NO RequirementStatus, Comments, (OnReserve, EditionOk, LateUse all set to true)",
+                "OnReserve": true,
+                "EditionOk": true,
+                "LateUse": true
+            },
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9780199855599",
+                "Title": "Hippies, Indians, and the fight for red power NO COMMENTS",
+                "Author": "Sherry L. Smith.",
+                "Edition": "2nd",
+                "Publisher": "Oxford University Press",
+                "PubLocation": "Oxford",
+                "PubYear": "2012",
+                "RequirementStatus": "Required",
+                "Comments": "",
+                "OnReserve": true,
+                "EditionOk": true,
+                "LateUse": true
+            },
+            {
+                "ItemType": "Textbook",
+                "ISBN": "9780199855599",
+                "Title": "Hippies, Indians, and the fight for red power",
+                "Author": "Sherry L. Smith.",
+                "Edition": "2nd",
+                "Publisher": "Oxford University Press",
+                "PubLocation": "Oxford",
+                "PubYear": "2012",
+                "RequirementStatus": "Required",
+                "Comments": "Some comments. This texbook has ItemType, ISBN, Title, Author, Edition, Publisher, PubLocation, PubYear, RequirementStatus, Comments, (OnReserve, EditionOk, LateUse all set to false)",
+                "OnReserve": false,
+                "EditionOk": false,
+                "LateUse": false
+            }
+        ]
+    }
+]
