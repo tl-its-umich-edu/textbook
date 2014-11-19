@@ -52,6 +52,13 @@
                                     <span ng-show="book.PubYear">{{book.PubYear}}.</span>
                                     <span ng-show="book.RequirementStatus" class="status">&nbsp;&nbsp;{{book.RequirementStatus}}</span>
                                 </p>
+                            <p ng-show="book.Comments"><small>Instructor comments: "{{book.Comments}}"</small></p>
+                            <p>
+                                <small ng-show="book.OnReserve">This item is <strong> on Reserve</strong>.</small>
+                                <small ng-show="book.EditionOk">It is fine to use a <strong>different edition</strong>.</small>
+                                <small ng-show="book.LateUse">We will be needing it <strong>only in the later part of the term</strong>.</small>
+                            </p>
+
                             </div>
                         </li>
                     </ul>

@@ -5,7 +5,7 @@
                 <div>
                     <h2 class="row">
                         <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
-                            <a href="{{course.Link}}" class="courseLink">{{course.Title}}</a>
+                            <a href="{{course.Link}}" class="courseLink" title="{{course.Subtitle}}">{{course.Title}}</a>
                         </div>
                         <div class="col-lg-8  col-md-8 col-sm-8 hidden-xs">
                             <small class ="instructorName" ng-show="course.Instructor.Name">
@@ -24,7 +24,7 @@
                 </div>
             </li>
             <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:right">
-                <a ng-show="course.Textbook.length || course.note || course.coursepack_location" class="booksControl" href="" role="tab">Books</a>
+                <a ng-show="course.Textbook.length || course.note || course.coursepack_location" class="booksControl" href="" role="tab" title="{{course.Textbook.length}}">Books</a>
                 <a ng-hide="course.Textbook.length || course.note || course.coursepack_location" class="pseudolink">Books</a>
                 <li class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="text-align:right">
                 <a ng-show="course.description" class="infoControl" href="" role="tab">Info</a>
@@ -56,6 +56,12 @@
                                 <span ng-show="book.Publisher">{{book.Publisher}}:</span>
                                 <span ng-show="book.PubYear">{{book.PubYear}}.</span>
                                 <span ng-show="book.RequirementStatus" class="status">&nbsp;&nbsp;{{book.RequirementStatus}}</span>
+                            </p>
+                            <p ng-show="book.Comments"><small>Instructor comments: "{{book.Comments}}"</small></p>
+                            <p>
+                                <small ng-show="book.OnReserve">This item is <strong> on Reserve</strong>.</small>
+                                <small ng-show="book.EditionOk">It is fine to use a <strong>different edition</strong>.</small>
+                                <small ng-show="book.LateUse">We will be needing it <strong>only in the later part of the term</strong>.</small>
                             </p>
                         </div>
                         <div class="sellLinks">
