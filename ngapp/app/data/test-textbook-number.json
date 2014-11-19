@@ -69,7 +69,11 @@
                 "Publisher": "Oxford University Press",
                 "PubLocation": "Oxford",
                 "PubYear": "2012",
-                "RequirementStatus": "Required"
+                "RequirementStatus": "Required",
+                "Comments": "",
+                "OnReserve": false,
+                "EditionOk": false,
+                "LateUse": false
             }
         ]
     },
@@ -106,7 +110,12 @@
                 "Publisher": "Prentice Hall",
                 "PubLocation": "Boston",
                 "PubYear": "2010",
-                "RequirementStatus": "Required"
+                "RequirementStatus": "Required",
+                "Comments": "",
+                "OnReserve": false,
+                "EditionOk": false,
+                "LateUse": false
+
             }
         ]
     },
@@ -167,7 +176,12 @@
                 "Publisher": "John Wiley & Sons",
                 "PubLocation": "Hoboken, NJ",
                 "PubYear": "2013",
-                "RequirementStatus": "Required"
+                "RequirementStatus": "Required",
+                "Comments": "",
+                "OnReserve": false,
+                "EditionOk": false,
+                "LateUse": false
+
             },
             {
                 "ItemType": "Textbook",
@@ -178,7 +192,12 @@
                 "Publisher": "",
                 "PubLocation": "",
                 "PubYear": "2013",
-                "RequirementStatus": "Required"
+                "RequirementStatus": "Required",
+                "Comments": "",
+                "OnReserve": false,
+                "EditionOk": false,
+                "LateUse": false
+
             }
         ]
     }
