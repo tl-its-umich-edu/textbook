@@ -32,7 +32,11 @@
                 "Publisher": "Oxford University Press",
                 "PubLocation": "Oxford",
                 "PubYear": "2012",
-                "RequirementStatus": "Required"
+                "RequirementStatus": "Required",
+                "Comments": "",
+                "OnReserve": false,
+                "EditionOk": false,
+                "LateUse": false
             }
         ]
     },
