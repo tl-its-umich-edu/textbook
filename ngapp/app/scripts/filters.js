@@ -34,4 +34,13 @@ angular.module('textBookFilters', []).filter('dateAgo', function(){
         }
         
     };
+}).filter('pluralize', function(){
+    return function(input, noun){
+        if (input > 1 || input === 0) {
+            return input +  ' ' + noun + 's';
+        }
+        else {
+            return input +  ' ' + noun;
+        }        
+    };
 });
