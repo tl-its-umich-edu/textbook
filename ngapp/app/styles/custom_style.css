@@ -231,7 +231,17 @@ non-boostrap styles
 .slideLeft.ng-enter.ng-enter-active {
   opacity: 1;
 }
+/*
+print
+*/
 
+.printBody {
+  padding:10px;
+}
+
+.printBody  h2 .col-lg-4 {
+  padding:0;
+}
 /*
 mobile
 */
