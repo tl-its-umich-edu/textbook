@@ -24,8 +24,8 @@
                 </div>
             </li>
             <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:right">
-                <a ng-show="course.Textbook.length || course.note || course.coursepack_location" class="booksControl" href="" role="tab">Books</a>
-                <a ng-hide="course.Textbook.length || course.note || course.coursepack_location" class="pseudolink">Books</a>
+                <a ng-show="(course.Textbook.length && course.Textbook[0].ItemType !=='') || course.note || course.coursepack_location" class="booksControl" href="" role="tab">Books</a>
+                <a ng-hide="(course.Textbook.length && course.Textbook[0].ItemType !=='') || course.note || course.coursepack_location" class="pseudolink">Books</a>
                 <li class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="text-align:right">
                 <a ng-show="course.description" class="infoControl" href="" role="tab">Info</a>
                 <a ng-hide="course.description" class="pseudolink">Info</a>
