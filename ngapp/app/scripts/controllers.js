@@ -63,7 +63,6 @@ textApp.controller('coursesController', ['$scope', '$http', function($scope, $ht
                 l.Textbook = [].concat(l.Textbook);
             }
           });
-          console.log(JSON.stringify(data));
           $scope.courses= data;
     });
 }
