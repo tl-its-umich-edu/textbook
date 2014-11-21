@@ -11,8 +11,8 @@ var textApp = angular.module('textApp', ['textBookFilters', 'ngRoute', 'ngAnimat
  * @returns {string|*}
  */
 function getRailsUrl() {
-    var url = location.protocol + "//" + location.host;
-    return  url.replace(location.port, "3000");
+    var url = location.protocol + '//' + location.host;
+    return  url.replace(location.port, '3000');
 }
 
 textApp.config(function($routeProvider){
@@ -46,12 +46,12 @@ textApp.config(function($routeProvider){
 textApp.controller('coursesController', ['$scope', '$http', function($scope, $http){
     var url = getRailsUrl() + '/api/v1/classes.json';
     //below for testing    
-    //var url = 'data/courses2.json';
+    //var url = 'data/test-textbook-number.json';
 
     $http.get(url, {
             params: {
                 term: '2010',
-                uid:'ststvii'
+                uid:'jorhill'
             }
         }
     ).success(function(data){
@@ -59,9 +59,12 @@ textApp.controller('coursesController', ['$scope', '$http', function($scope, $ht
             l.Instructor = _.filter(l.Instructor, function (instructor) {
               return instructor.Role !== 'Dummy';
             });
+            if(l.Textbook.length === undefined){
+                l.Textbook = [].concat(l.Textbook);
+            }
           });
+          console.log(JSON.stringify(data));
           $scope.courses= data;
-
     });
 }
 ]);
