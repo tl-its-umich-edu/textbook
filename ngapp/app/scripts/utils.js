@@ -83,5 +83,4 @@ $('#sellModal').on('show.bs.modal', function (e) {
   else {
      $('#modalBookPrice').val();
   }
-  
 });
