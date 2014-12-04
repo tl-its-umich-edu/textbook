@@ -44,6 +44,7 @@ textApp.config(function($routeProvider){
 });
 
 textApp.controller('coursesController', ['$scope', '$http', function($scope, $http){
+    $scope.loading = true;
     var url = getRailsUrl() + '/api/v1/classes.json';
     //below for testing    
     //var url = 'data/test-textbook-number.json';
@@ -63,6 +64,7 @@ textApp.controller('coursesController', ['$scope', '$http', function($scope, $ht
                 l.Textbook = [].concat(l.Textbook);
             }
           });
+          $scope.loading = false;
           $scope.courses= data;
     });
 }
