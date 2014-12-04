@@ -207,6 +207,11 @@ non-boostrap styles
 .courseLink {
   white-space:nowrap;
 }
+.bookCover {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+}
 /*
  angular animations for desktop
  */
