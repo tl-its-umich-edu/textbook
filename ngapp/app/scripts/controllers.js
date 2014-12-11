@@ -56,6 +56,7 @@ textApp.controller('coursesController', ['$scope', '$http', function($scope, $ht
             }
         }
     ).success(function(data){
+          var isbns = [];
           $.each(data, function (i, l) {
             l.Instructor = _.filter(l.Instructor, function (instructor) {
               return instructor.Role !== 'Dummy';
@@ -63,9 +64,13 @@ textApp.controller('coursesController', ['$scope', '$http', function($scope, $ht
             if(l.Textbook.length === undefined){
                 l.Textbook = [].concat(l.Textbook);
             }
+            $.each(l.Textbook, function (i, l) {
+                isbns.push(this.ISBN);
+            });
           });
           $scope.loading = false;
           $scope.courses= data;
+          $scope.isbns = _.uniq(isbns).toString();
     }).error(function() {
         $scope.error = true;
         $scope.errorUrl = url;

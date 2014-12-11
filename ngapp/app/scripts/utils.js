@@ -58,6 +58,11 @@ $(document).on('click', 'a.booksControl', function(e){
     $(this).closest('.courseItem').find('.booksPane').slideDown( 'slow');
 });
 
+$(document).on('click', 'a#sellAll', function(e){
+    e.preventDefault();
+    var url = 'http://www.cash4books.net/main.php?isbn=' + $('#isbnHolder').text();
+    window.open(url);
+});
 $(document).on('click', 'a.infoControl', function(e){
     e.preventDefault();
     $('.activeItem').removeClass('activeItem');
