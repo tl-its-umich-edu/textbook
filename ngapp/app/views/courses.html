@@ -57,7 +57,7 @@
                                 <img class="bookCover" src="http://img9.gettextbooks.com/pi/{{book.ISBN}}/75/200" />
                             </div>
                             <div class="col-md-11 col-lg-11 col-sm-12 col-xs-12">
-                                <h3 class="bookTitle">{{book.Title}}</h3>
+                                <h3 class="bookTitle">{{book.Title | titlecase}}</h3>
                                 <p class="author">
                                     <span ng-show="book.Author">{{book.Author}} </span>
                                     <span ng-show="book.PubLocation">{{book.PubLocation}}.</span>
