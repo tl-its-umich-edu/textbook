@@ -1,6 +1,8 @@
 <div class="spinner" ng-show="loading"></div>
 <div ng-show="error" class="alert alert-danger"><p>We asked for <code>{{errorUrl}}</code></p><p>But something happened! We are very sorry.</p></div>
+<span style="display:none" id="isbnHolder">{{isbns}}</span>
 <ul class="course-list">
+
     <li ng-repeat="course in courses" class="courseItem">
         <ul class="nav nav-tabs row navTabs" role="tablist">
             <li class="fake col-lg-8 col-md-8 col-sm-8 col-xs-8">
