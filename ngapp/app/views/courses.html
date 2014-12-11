@@ -9,7 +9,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
                             <a href="{{course.Link}}" class="courseLink">{{course.Title}}</a>
                         </div>
-                        <div class="col-lg-8  col-md-8 col-sm-8 hidden-xs">
+                        <div class="col-lg-8  col-md-8 col-sm-8 hidden-xs hidden-sm">
                             <small class ="instructorName" ng-show="course.Instructor.Name">
                                 {{course.Instructor.Name | fixInstructorName }} (<a href="mailto:{{course.Instructor.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
                             </small>
@@ -28,9 +28,11 @@
             <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:right">
                 <a ng-show="(course.Textbook.length && course.Textbook[0].ItemType !=='') || course.note || course.coursepack_location" class="booksControl" href="" role="tab">Books</a>
                 <a ng-hide="(course.Textbook.length && course.Textbook[0].ItemType !=='') || course.note || course.coursepack_location" class="pseudolink">Books</a>
-                <li class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="text-align:right">
-                <a ng-show="course.description" class="infoControl" href="" role="tab">Info</a>
-                <a ng-hide="course.description" class="pseudolink">Info</a>
+            </li>
+            <li class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="text-align:right">
+                <a ng-show="course.description" class="hidden-xs hidden-sm infoControl" href="" role="tab"  style="display: inline-block;">Info</a>
+                <a ng-hide="course.description" class="hidden-xs hidden-sm pseudolink">Info</a>
+                <a class="visible-xs visible-sm infoControl" href="" role="tab" style="display: inline-block;margin:0;width:50px">Info</a>
             </li>
         </ul>
         <div class="tab-content">
@@ -55,7 +57,7 @@
                                 <img class="bookCover" src="http://img9.gettextbooks.com/pi/{{book.ISBN}}/75/200" />
                             </div>
                             <div class="col-md-11 col-lg-11 col-sm-12 col-xs-12">
-                                <h3 class="bookTitle">{{book.Title}}</h3>
+                                <h3 class="bookTitle">{{book.Title | titlecase}}</h3>
                                 <p class="author">
                                     <span ng-show="book.Author">{{book.Author}} </span>
                                     <span ng-show="book.PubLocation">{{book.PubLocation}}.</span>
@@ -92,11 +94,23 @@
                 </p>
             </div>
             <div class="pane tab-pane infoPane">
-                <p class="visible-xs instructorInfo  ng-show="course.Instructor.Name"">
-                    Instructor: {{course.Instructor.Name}} (<a href="mailto:{{course.Instructors.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
-                </p>
-                <div class="courseDescription">
-                    {{course.description}}
+                <div class="visible-xs visible-sm instructorInfo">
+                    <div>
+                        <span ng-show="course.Title">{{course.Title}}</span>
+                        <span ng-show="course.SectionNumber">Section {{course.SectionNumber}}</span>
+                        <span ng-show="course.Subtitle">{{course.Subtitle}}</span>
+                    </div>
+                    <div ng-show="course.Instructor.Name">
+                        {{course.Instructor.Name | fixInstructorName }} (<a href="mailto:{{course.Instructor.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
+                    </div>
+                    <div ng-hide="course.Instructor.Name || course.Instructor.length">
+                        Staff
+                    </div>
+                    <div ng-show="course.Instructor.length">
+                        <small ng-repeat="instructor in course.Instructor | orderBy:'Role'">
+                            {{instructor.Name | fixInstructorName }} (<a href="mailto:{{instructor.Email | lowercase}}" class="mailTolink">{{instructor.Email | lowercase}}</a>)<span ng-show="!$last">, </span>
+                        </small>
+                    </div>
                 </div>
             </div>
         </div>

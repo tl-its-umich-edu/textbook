@@ -17,3 +17,9 @@
 
 # ignore the config file
 /config/local_env.yml
+
+# ignore rubymines (.idea) files
+.idea/**
+
+# ignore Gemfile.lock
+Gemfile.lock

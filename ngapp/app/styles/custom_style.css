@@ -118,6 +118,9 @@ non-boostrap styles
   padding: 0 10px;
   background: #f2f2f2
 }
+.printView {
+  padding:10px;
+}
 .pane_print {
     font-size:.8em;
     border-top:1px solid #ccc;
