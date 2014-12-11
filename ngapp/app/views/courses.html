@@ -73,9 +73,14 @@
                                     </a>
                                     -->
                                     <div ng-show="book.ISBN">
+                                        <strong class="muted">Buy:</strong>
                                         <a class="gotoVendor" target="_blank" href="http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords={{book.ISBN}}">Amazon</a>
                                         <a class="gotoVendor" target="_blank" href="http://www.gettextbooks.com/isbn/{{book.ISBN}}">Textbooks.com</a>
                                         <a class="gotoVendor" target="_blank" href=" http://www.booksprice.com/comparePrice.do?l=y&searchType=compare&inputData={{book.ISBN}}">BooksPrice.com</a>
+                                        <strong class="muted">Sell:</strong>
+                                        <a class="gotoVendor" target="_blank" href="http://www.bookfinder.com/buyback/search/#{{book.ISBN}}">BookFinder</a>
+                                        <a class="gotoVendor" target="_blank" href="http://www.cash4books.net/main.php?isbn={{book.ISBN}}">Cash4Books</a>
+
                                     </div>
                                 </div>
 
