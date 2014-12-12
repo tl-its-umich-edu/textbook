@@ -33,7 +33,7 @@ rvm use 1.9.3
 git clone https://github.com/tl-its-umich-edu/textbook
 cd textbook
 bundle install
-bundle exec rails s -p 3000
+nohup bundle exec rails s -p 3000 &
 ```
 
 ### Session two: a grunt server
@@ -44,7 +44,7 @@ sudo npm install -g grunt-cli
 sudo npm install -g bower
 npm install
 bower install
-grunt serve # opens a browser window... you are done!
+nohup grunt serve & # opens a browser window... you are done!
 ```
 
 #License#
