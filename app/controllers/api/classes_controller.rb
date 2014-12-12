@@ -13,9 +13,6 @@ class Api::ClassesController < ApplicationController
 
 	def index
 
-		#the return json object
-		rv_json = ""
-
 		term=params[:term]
 		uid=params[:uid]
 
@@ -40,29 +37,11 @@ class Api::ClassesController < ApplicationController
 		#get the current token
 		access_token = refresh_token(key, secret, token_url)
 
-		#get course information
-		call_url = url + "/StudentDashboard/v1/Students/" + uid + "/Terms/" + term + "/Schedule";
+		#get course textbook information
+		call_url = url + "/StudentRecords/v1/Students/" + uid + "/Terms/" + term + "/Textbooks";
 
-		json_courses = api_call(call_url, "Bearer " + access_token, "application/json", "GET", nil)
-
-		# get the course information
-		rv_json = ["RegisteredClasses"]
-
-		response_data = json_courses["getMyClsScheduleResponse"]
-		classes_array = response_data["RegisteredClasses"]
-
-		classes_array.each  do |c|
-				subject_catalog_array = c["Title"].split(' ')
-				textbooks_response = api_call(url + "/Curriculum/SOC/v1/Terms/" + term + "/Schools/" + "" + "/Subjects/" + subject_catalog_array[0] + "/CatalogNbrs/" + subject_catalog_array[1] + "/Sections/" + "001" + "/Textbooks", "Bearer " + access_token, "application/json", "GET", nil)
-
-				# insert books into JSON
-				c["Textbook"] = textbooks_response["getSOCTextbooksResponse"]["Textbook"]
-		end
-		p classes_array
-		render :json => classes_array
-
-		#get textbook information
-		#render :json => api_call(url + "/Curriculum/SOC/v1/Terms/" + term + "/Schools/" + school + "/Subjects/" + subject + "/CatalogNbrs/" + catalogNbr + "/Sections/" + section + "/Textbooks", "Bearer " + access_token, "application/json", "GET", nil)
+		json_textbooks = api_call(call_url, "Bearer " + access_token, "application/json", "GET", nil)
+		render :json => json_textbooks
 
 	end
 
