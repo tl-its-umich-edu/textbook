@@ -7,9 +7,10 @@
                     <li class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                         <div>
                             <h2 class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
-                                    {{course.Title}}
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-sm-12" style="padding-left:0">
+                                    {{course.SubjectCode}} {{course.CatalogNumber}} {{course.SectionNumber}}
                                 </div>
+                                <!--//not in most recent data
                                 <div class="col-lg-8  col-md-8 col-sm-8 hidden-xs">
                                     <small class ="instructorName" ng-show="course.Instructor.Name">aaa1
                                         {{course.Instructor.Name | fixInstructorName }} {{course.Instructor.Email | lowercase}})
@@ -21,25 +22,19 @@
                                         <small class="instructorName" ng-repeat="instructor in course.Instructor | orderBy:'Role' | limitTo:1">
                                         Instructor: {{instructor.Name | fixInstructorName }} ({{instructor.Email | lowercase}})</small>
                                     </div>
-
                                 </div>
+                            -->
                             </h2>
                         </div>
                     </li>
                 </ul>
-                <div ng-show="course.Textbook.length || course.note || course.coursepack_location">
+                <div ng-show="course.Textbook.length || course.InstructorNotes || course.CoursePackLocation">
                     <div class="pane_print">
-                        <div class="visible-xs visible-sm instructorInfo">
-                            <div ng-show="course.Instructor.Name">aaa3
-                                {{course.Instructor.Name | fixInstructorName }} (<a href="mailto:{{course.Instructor.Email | lowercase}}" class="mailTolink">{{course.Instructor.Email | lowercase}}</a>)
-                            </div>
-                            <div ng-hide="course.Instructor.Name || course.Instructor.length">aaa4
-                                Staff
-                            </div>
-                            <div ng-show="course.Instructor.length">
-                                <small ng-repeat="instructor in course.Instructor | orderBy:'Role'">
-                                    {{instructor.Name | fixInstructorName }} (<a href="mailto:{{instructor.Email | lowercase}}" class="mailTolink">{{instructor.Email | lowercase}}</a>)<span ng-show="!$last">, </span>
-                                </small>
+                        <div>
+                            <div ng-show="course.InstructorNotes" class="instructorNotes">{{course.InstructorNotes}}</div>
+                            <div ng-show="course.CoursePackLocation" class="coursePackInfo">
+                                <span class="status" ng-show="course.CoursePackRequired ==='Y'">Coursepack Required.</span>
+                                <span ng-show="course.CoursePackLocation"> Find at: {{course.CoursePackLocation}}.</span>
                             </div>
                         </div>
                         <ul ng-show="course.Textbook">
@@ -51,8 +46,16 @@
                                         <span ng-show="book.PubLocation">{{book.PubLocation}}.</span>
                                         <span ng-show="book.Publisher">{{book.Publisher}}:</span>
                                         <span ng-show="book.PubYear">{{book.PubYear}}.</span>
+                                    </p>
+                                    <p class="author"> 
+                                        <span ng-show="book.OnReserve ==='Y'">This item is on reserve.</span>
+                                        <span ng-show="book.EditionOk ==='N'">This edition is required.</span>
+                                        <span ng-show="book.EditionOk ==='Y'">Other editions are OK.</span>
+                                        <span ng-show="book.LateUse ==='N'">Need it at the start of the term.</span>
+                                        <span ng-show="book.LateUse ==='Y'">Will not be needing it till later in the term.</span>
                                         <span ng-show="book.RequirementStatus" class="status">&nbsp;&nbsp;{{book.RequirementStatus}}</span>
                                     </p>
+
                                 </div>
                             </li>
                         </ul>

@@ -1,0 +1,92 @@
+{
+    "getMyTextbooksResponse": {
+        "@schemaLocation": "http://mais.he.umich.edu/schemas/getMyTextbooksResponse.v1 http://csqa9ib.dsc.umich.edu/PSIGW/PeopleSoftServiceListeningConnector/getMyTextbooksResponse.v1.xsd",
+        "RegisteredClass": [
+            {
+                "SubjectCode": "AMCULT",
+                "CatalogNumber": "217",
+                "SectionNumber": "001",
+                "ClassNumber": "20061",
+                "InstructorNotes": "",
+                "CoursePackRequired": "Y",
+                "CoursePackLocation": "Lala",
+                "Textbook": {
+                    "ItemType": "Textbook",
+                    "ISBN": "9780199855599",
+                    "Title": "Hippies, Indians, and the fight for red power",
+                    "Author": "Sherry L. Smith.",
+                    "Edition": "",
+                    "Publisher": "Oxford University Press",
+                    "PubLocation": "Oxford",
+                    "PubYear": "2012",
+                    "RequirementStatus": "Required",
+                    "OnReserve": "Y",
+                    "EditionOk": "N",
+                    "LateUse": "N"
+                }
+            },
+            {
+                "SubjectCode": "MKT",
+                "CatalogNumber": "408",
+                "SectionNumber": "001",
+                "ClassNumber": "26875",
+                "InstructorNotes": "",
+                "CoursePackRequired": "",
+                "CoursePackLocation": "",
+                "Textbook": {
+                    "ItemType": "Textbook",
+                    "ISBN": "0136106811",
+                    "Title": "The strategy and tactics of pricing : a guide to growing more profitably",
+                    "Author": "Thomas T. Nagle, John E. Hogan, Joseph Zale.",
+                    "Edition": "5th ed.",
+                    "Publisher": "Prentice Hall",
+                    "PubLocation": "Boston",
+                    "PubYear": "2010",
+                    "RequirementStatus": "Required",
+                    "OnReserve": "N",
+                    "EditionOk": "N",
+                    "LateUse": "N"
+                }
+            },
+            {
+                "SubjectCode": "TO",
+                "CatalogNumber": "411",
+                "SectionNumber": "001",
+                "ClassNumber": "19941",
+                "InstructorNotes": "",
+                "CoursePackRequired": "",
+                "CoursePackLocation": "",
+                "Textbook": [
+                    {
+                        "ItemType": "Textbook",
+                        "ISBN": "9781118490372",
+                        "Title": "Excel VBA Programming for Dummies",
+                        "Author": "John Walkenbach",
+                        "Edition": "3RD",
+                        "Publisher": "John Wiley & Sons",
+                        "PubLocation": "Hoboken, NJ",
+                        "PubYear": "2013",
+                        "RequirementStatus": "Required",
+                        "OnReserve": "N",
+                        "EditionOk": "N",
+                        "LateUse": "Y"
+                    },
+                    {
+                        "ItemType": "Textbook",
+                        "ISBN": "1285169336",
+                        "Title": "New perspectives on Microsoft Office Excel 2013.",
+                        "Author": "Roy Ageloff, June Jamrich Parsons, Dan Oja, Patrick Carey.",
+                        "Edition": "",
+                        "Publisher": "",
+                        "PubLocation": "",
+                        "PubYear": "2013",
+                        "RequirementStatus": "Required",
+                        "OnReserve": "N",
+                        "EditionOk": "N",
+                        "LateUse": "N"
+                    }
+                ]
+            }
+        ]
+    }
+}

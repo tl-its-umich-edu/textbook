@@ -47,7 +47,7 @@ textApp.controller('coursesController', ['$scope', '$http', function($scope, $ht
     $scope.loading = true;
     var url = getRailsUrl() + '/api/v1/classes.json';
     //below for testing
-    //var url = 'data/test-textbook-number.json';
+    //var url = 'data/test-new-data-format.json';
 
     $http.get(url, {
             params: {
@@ -56,6 +56,7 @@ textApp.controller('coursesController', ['$scope', '$http', function($scope, $ht
             }
         }
     ).success(function(data){
+        data = data.getMyTextbooksResponse.RegisteredClass
           var isbns = [];
           $.each(data, function (i, l) {
             l.Instructor = _.filter(l.Instructor, function (instructor) {
@@ -64,6 +65,7 @@ textApp.controller('coursesController', ['$scope', '$http', function($scope, $ht
             if(l.Textbook.length === undefined){
                 l.Textbook = [].concat(l.Textbook);
             }
+
             $.each(l.Textbook, function (i, l) {
                 isbns.push(this.ISBN);
             });
