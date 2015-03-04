@@ -38,7 +38,7 @@ class Api::ClassesController < ApplicationController
 		access_token = refresh_token(key, secret, token_url)
 
 		#get course textbook information
-		call_url = url + "/StudentRecords/v1/Students/" + uid + "/Terms/" + term + "/Textbooks";
+		call_url = url + "/TestStudentRecords/v1/Students/" + uid + "/Terms/" + term + "/Textbooks";
 
 		json_textbooks = api_call(call_url, "Bearer " + access_token, "application/json", "GET", nil)
 		render :json => json_textbooks
